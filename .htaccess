@@ -1,0 +1,7 @@
+# RewriteEngine On
+# RewriteRule ^([0-9A-ZA-Z-]+)$ details.php?pro_id=$1 [QSA,NC,L]
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+</IfModule>

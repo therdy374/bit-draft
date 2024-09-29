@@ -1,0 +1,244 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nosnippet">
+    <meta name="robots" content="noarchive">
+    <meta name="robots" content="noindex, nofollow">
+    <title>bit-pro</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/jquery-latest.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/custom.js"></script>
+
+    <link rel="stylesheet" href="css/import.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <article class="headerArticle">
+        <header>
+            <div>
+                <h1>
+                    <a href="index.html"></a>
+                </h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="trading.html">거래소</a></li>
+                        <li><a href="balance.html">입출금</a></li>
+                        <li><a href="board/List.html">공지사항</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <ul>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="signUp.html">회원가입</a>
+                        </li>
+                    </ul>
+
+                    <div class="pcSwitch">
+                        <input type="checkbox" id="modeSwitch">
+                        <label for="modeSwitch"><span></span></label>
+                    </div>
+
+                    <input type="button" value="gnbToggle" data-panel="gnbPanel" id="gnbBtn">
+                </div>
+            </div>
+
+
+            <nav id="gnbPanel">
+                <input type="button" value="close" class="closeBtn">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="signUp.html">회원가입</a>
+                    </li>
+                </ul>
+
+                <ul>
+
+                </ul>
+
+                <ul>
+
+                    <li><a href="trading.html">거래소</a></li>
+                    <li><a href="balance.html">입출금</a></li>
+                    <li><a href="board/notice.html">공지사항</a></li>
+
+
+                </ul>
+
+
+
+                <ol id="slideToggle">
+                    <li>
+                        <div>
+                            <span>Theme</span>
+                            <input type="checkbox" id="modeSwitch2">
+                            <label for="modeSwitch2"><span></span></label>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </header>
+    </article>
+
+    <script src="js/home.js"></script>
+
+    <section class="mainContainer">
+        <h2>main</h2>
+        <div class="mainVisualBox">
+            <div>
+                <h4>글로벌 표준 디지털 자산 거래소</h4>
+                <p>안전하고 투명한 시스템으로 빠르고 편리한 거래환경을 제공합니다.</p>
+                <a href="trading.html">거래소 둘러보기</a>
+            </div>
+        </div>
+        <!-- main Visual -->
+
+        <div class="mainVisualBottomBox">
+            <div class="mvBottomWrap">
+                <div>
+                    <span>글로벌 표준 거래소 </span>
+                    <img src="images/logo_mvBottom.png">
+                    <span>를 통해 입출금 수수료 및 최저 수수료까지 모두 챙겨가세요!</span>
+                    <a href="signUp.html">회원가입 바로가기</a>
+                </div>
+            </div>
+        </div>
+        <!-- main Visual -->
+
+        <div class="tradBox">
+            <h3>코인 시세</h3>
+            <ul class="tradSlider">
+
+                <li id="crypto-table-body1" class="" aria-hidden="true" tabindex="0">
+                    <div><img src="images/coin/btc.png"><b>BTC</b></div><span class="whitey">67846.54</span><span
+                        class="dangeralarm">-0.72</span><span>29668490629.202972</span><a
+                        href="Trading.html?coinName=btcusdt">Trade</a>
+                </li>
+                <li id="crypto-table-body2" class="slick-current slick-active" aria-hidden="false" tabindex="-1">
+                    <div><img src="images/coin/xrp.png"><b>XRP</b></div><span class="whitey">0.529122</span><span
+                        class="greeney">+0.16</span><span>925200454.2959931</span><a
+                        href="Trading.html?coinName=xrpusdt">Trade</a>
+                </li>
+                <li id="crypto-table-body3" class="" aria-hidden="true" tabindex="-1">
+                    <div><img src="images/coin/eth.png"><b>ETH</b></div><span class="whitey">3806.56</span><span
+                        class="dangeralarm">-1.96</span><span>15639293740.035336</span><a
+                        href="Trading.html?coinName=ethusdt">Trade</a>
+                </li>
+                <li id="crypto-table-body4" class="" aria-hidden="true" tabindex="-1">
+                    <div><img src="images/coin/bnb.png"><b>BNB</b></div><span class="whitey">599.24</span><span
+                        class="dangeralarm">-0.46</span><span>565300978.7762188</span><a
+                        href="Trading.html?coinName=bnbusdt">Trade</a>
+                </li>
+                <li id="crypto-table-body5" class="" aria-hidden="true" tabindex="-1">
+                    <div><img src="images/coin/ada.png"><b>ADA</b></div><span class="whitey">0.462115</span><span
+                        class="greeney">+0.62</span><span>281918404.1963343</span><a
+                        href="Trading.html?coinName=adausdt">Trade</a>
+                </li>
+            </ul>
+        </div>
+        <!-- main Silde -->
+
+        <div class="welBox">
+            <div>
+                <h3>편리한 입출금 및 실시간 가격지원</h3>
+                <p>
+                    입출금 수수료 없이 입금 후 딜레이 없는 빠른 거래 가능!<br>
+                    회원가입후 즉시 선물거래가 가능한 비트프로에서 여러분의 자산을 보다 쉽고 빠르게 늘려보세요.
+                </p>
+            </div>
+        </div>
+
+        <div class="advanBox">
+            <ol>
+                <li>
+                    <img src="images/ico_main01.png" alt="advan area icon">
+                    <h4>자유로운 거래</h4>
+                    <p>1~100 배의 레버러지로 자유로운 수익실현 가능 100+ 개의 코인으로 원하는 코인에 배팅가능</p>
+                </li>
+                <li>
+                    <img src="images/ico_main02.png" alt="advan area icon">
+                    <h4>글로벌 거래소와 동일한 플랫폼</h4>
+                    <p>바이낸스에 존재하는 모든 COIN-M 선물 코인 동일하게 거래가능</p>
+                </li>
+                <li>
+                    <img src="images/ico_main03.png" alt="advan area icon">
+                    <h4>우수한 고객서비스</h4>
+                    <p>24시간 고객 응대 가능 및 VIP 고객을 위한 1:1 문의 지원</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <!-- main Container -->
+
+    <div id="positionCheck"></div>
+
+    <footer>
+        <div>
+            <div>
+                <h4></h4>
+                <ul>
+                    <li>모든 컨텐츠 저작권은 비트프로에 있으며, 무단도용시 법적 불이익을 받습니다.</li>
+                    <li>Copyright © 비트프로. All rights reserved</li>
+                    <li>
+                        <ol>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+
+            <ul>
+                <li>
+                    <b>파트너</b>
+                    <ol>
+                        <li><a href="https://www.binance.com">바이낸스</a></li>
+                        <li><a href="https://www.upbit.com">업비트</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <b>회사 소개</b>
+                    <ol>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="/Board/List.aspx?id=notice">공지사항</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">Open API 이용약관</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+
+        var rCnt = 0;
+        if (rCnt > 0 && window.location.href.indexOf("qna") < 0) {
+            Swal.fire('확인하지 않은 관리자 댓글이 있습니다.').then(function () {
+                window.location = '/Board/List.html?id=qna';
+            })
+        }
+        var rCnt2 = 0;
+        if (rCnt2 > 0 && window.location.href.indexOf("message") < 0) {
+            Swal.fire('확인하지 않은 알림이 있습니다.').then(function () {
+                window.location = '/Board/List.html?id=message';
+            })
+        }
+    </script>
+
+    <div id="extension-mmplj"></div>
+</body>
+
+</html>

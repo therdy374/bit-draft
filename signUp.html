@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nosnippet">
+    <meta name="robots" content="noarchive">
+    <meta name="robots" content="noindex, nofollow">
+    <title>bit-pro</title>
+
+
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/jquery-latest.min.js"></script>
+    <script src="js/slick.min.js"></script>
+
+    <script src="js/common.js"></script>
+    <script src="js/custom.js"></script>
+
+    <link rel="stylesheet" href="css/import.css">
+
+</head>
+
+<body>
+    <article class="headerArticle">
+        <header>
+            <div>
+                <h1>
+                    <a href="index.html"></a>
+                </h1>
+
+                <nav>
+                    <ul>
+
+
+                        <li><a href="Trading.html">거래소</a></li>
+                        <li><a href="Balance.html">입출금</a></li>
+                        <li><a href="./Board/List.html?id=notice">공지사항</a></li>
+
+                    </ul>
+                </nav>
+
+                <div>
+                    <ul>
+                        <li><a href="Login.html">로그인</a></li>
+                        <li><a href="SignUp.html">회원가입</a>
+                        </li>
+                    </ul>
+
+                    <div class="pcSwitch">
+                        <input type="checkbox" id="modeSwitch">
+                        <label for="modeSwitch"><span></span></label>
+                    </div>
+
+                    <input type="button" value="gnbToggle" data-panel="gnbPanel" id="gnbBtn">
+                </div>
+            </div>
+
+
+
+            <nav id="gnbPanel">
+                <input type="button" value="close" class="closeBtn">
+                <ul>
+                    <li><a href="Login.html">로그인</a></li>
+                    <li><a href="SignUp.html">회원가입</a>
+                    </li>
+                </ul>
+
+                <ul>
+
+                </ul>
+
+                <ul>
+
+                    <li><a href="Trading.html">거래소</a></li>
+                    <li><a href="Balance.html">입출금</a></li>
+                    <li><a href="./Board/List.html?id=notice">공지사항</a></li>
+
+
+                </ul>
+
+
+
+                <ol id="slideToggle">
+                    <li>
+                        <div>
+                            <span>Theme</span>
+                            <input type="checkbox" id="modeSwitch2">
+                            <label for="modeSwitch2"><span></span></label>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </header>
+    </article>
+
+
+    <div class="subRouteContent">
+        <div class="wrapper">
+            <div class="sub-contents-layout">
+                <div class="frameWrapper">
+                    <div class="_layer_background"></div>
+                    <div class="invest_wrap">
+                        <!-- 메인컨텐츠 시작 -->
+                        <form method="post" action="./SignUp.aspx" onsubmit="javascript:return WebForm_OnSubmit();"
+                            id="form1">
+                            <div class="aspNetHidden">
+                                <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+                                <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+                                <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+                                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                                    value="/wEPDwULLTEwMzY3NTY5OTYPZBYCZg9kFgoCAQ8WAh4EVGV4dAXiAQ0KICAgICAgICA8bGk+PGEgaHJlZj0iL1RyYWRpbmcuYXNweCI+6rGw656Y7IaMPC9hPjwvbGk+DQogICAgICAgICAgICAgICAgICAgICAgICA8bGk+PGEgaHJlZj0iL0JhbGFuY2UuYXNweCI+7J6F7Lac6riIPC9hPjwvbGk+DQogICAgICAgICAgICAgICAgICAgICAgICA8bGk+PGEgaHJlZj0iL0JvYXJkL0xpc3QuYXNweD9pZD1ub3RpY2UiPuqzteyngOyCrO2VrTwvYT48L2xpPg0KICAgICAgICBkAgIPFgIfAAVXPGxpPjxhIGhyZWY9Ii9Mb2dpbi5hc3B4Ij7roZzqt7jsnbg8L2E+PC9saT48bGk+PGEgaHJlZj0iL1NpZ25VcC5hc3B4Ij7tmozsm5DqsIDsnoU8L2E+ZAIDDxYCHwAFVzxsaT48YSBocmVmPSIvTG9naW4uYXNweCI+66Gc6re47J24PC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9TaWduVXAuYXNweCI+7ZqM7JuQ6rCA7J6FPC9hPmQCBA8WAh8AZWQCBQ8WAh8ABeIBDQogICAgICAgIDxsaT48YSBocmVmPSIvVHJhZGluZy5hc3B4Ij7qsbDrnpjshow8L2E+PC9saT4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxsaT48YSBocmVmPSIvQmFsYW5jZS5hc3B4Ij7snoXstpzquIg8L2E+PC9saT4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxsaT48YSBocmVmPSIvQm9hcmQvTGlzdC5hc3B4P2lkPW5vdGljZSI+6rO17KeA7IKs7ZWtPC9hPjwvbGk+DQogICAgICAgIGRkCB4wiKxi4q+zjON+Qtf3xJGzDhHWca9BjbqfTtzwiCI=">
+                            </div>
+
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                var theForm = document.forms['form1'];
+                                if (!theForm) {
+                                    theForm = document.form1;
+                                }
+                                function __doPostBack(eventTarget, eventArgument) {
+                                    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                                        theForm.__EVENTTARGET.value = eventTarget;
+                                        theForm.__EVENTARGUMENT.value = eventArgument;
+                                        theForm.submit();
+                                    }
+                                }
+                                //]]>
+                            </script>
+
+
+                            <script
+                                src="/WebResource.axd?d=3mD3qAL-Zpmd839p2ASftxpcmnTi1UopBYKHNdRwn9Vxs3Ifoqko4AbiBa3PFhZvpMGbW8O06cvnLY65vDzLOa8kvPApKz-FYsf5fwMimhs1&amp;t=637814977746327080"
+                                type="text/javascript"></script>
+
+
+                            <script
+                                src="/WebResource.axd?d=ZEbLNRV6oD8ep0GYKyllrnB799bwYkMiEmq1ZaGCc_QIDCG7Rb4Hdfz4-8cGlUd6XHdtQB_nPUrhXYY0IEBlhAsJc9BREqIDQTm65H4efiU1&amp;t=637814977746327080"
+                                type="text/javascript"></script>
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                function WebForm_OnSubmit() {
+                                    if (typeof (ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+                                    return true;
+                                }
+                                //]]>
+                            </script>
+
+                            <div class="aspNetHidden">
+
+                                <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR"
+                                    value="36F90C25">
+                                <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                                    value="/wEdAAtMgbnF5VyFwuhkYvObYjZHdcqziCVoMOCpBmEcloBnojvFQkuDJK5vdNMKK7p07QzTKmKTapc/UzorkI/mv7L8rjScHNONobhdNQ3xAxcz6J1+9tVZ9z0v/z7BPikqz8d7wgLFzxyoa60+l82cZTpXbdsqe8sXnec5JKUVOeyaWZOLqFVmoxpPEcg+/6E4nxK49OmPaB1CTF/zbVncF93ig37KcKt0e/pOAjNL0JaPp6ZdtCm8kIYd4BWXSIxE2FV272dXy7nwnP6YFlD4FGCu">
+                            </div>
+
+                            <section class="joinContainer">
+                                <h2>SIGN UP</h2>
+                                <p>회원가입을 위한 정보를 입력해주세요.</p>
+
+                                <div>
+                                    <input name="ctl00$cpContent$txtUserId" type="text" maxlength="20"
+                                        onchange="javascript:setTimeout('WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cpContent$txtUserId&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))', 0)"
+                                        onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;"
+                                        id="cpContent_txtUserId" placeholder="사용하실 아이디를 입력하세요. (4자리 이상)"
+                                        autofill="False">
+
+                                    <span id="cpContent_SomeFieldValidator" class="warning-label"
+                                        style="color:Red;font-family:Verdana;display:none;">한글아이디는 사용할 수 없습니다.</span>
+                                    <p>
+                                        가입 후에는 사용자 아이디를 변경할 수 없습니다.<br>
+                                        아이디 분실 시 자산 손실의 위험이 있으니 주의하시기 바랍니다.
+                                    </p>
+
+                                    <input name="ctl00$cpContent$txtPasswd1" type="password" maxlength="30"
+                                        id="cpContent_txtPasswd1" placeholder="비밀번호 (6자리 이상)">
+
+                                    <input name="ctl00$cpContent$txtPasswd2" type="password" id="cpContent_txtPasswd2"
+                                        placeholder="비밀번호확인">
+                                    <span id="cpContent_comparePasswords"
+                                        style="color:Red;font-family:Verdana;display:none;">비밀번호가 일치하지 않습니다.</span>
+
+                                    <input name="ctl00$cpContent$txtName" type="text" maxlength="30"
+                                        id="cpContent_txtName" placeholder="이름(실명)을 입력하세요." required="true">
+                                    <input name="ctl00$cpContent$txtPhone" type="text" maxlength="15"
+                                        id="cpContent_txtPhone" placeholder="전화번호를 입력하세요. (숫자만 입력 가능)"
+                                        onkeypress="if ((event.keyCode < 48) || (event.keyCode > 57))  event.returnValue=false;"
+                                        required="true">
+                                    <input name="ctl00$cpContent$txtUserBankName" type="text" maxlength="20"
+                                        id="cpContent_txtUserBankName" placeholder="은행명" required="true">
+                                    <input name="ctl00$cpContent$txtUserBankAccountName" type="text" maxlength="20"
+                                        id="cpContent_txtUserBankAccountName" placeholder="예금주" required="true">
+                                    <input name="ctl00$cpContent$txtUserBankAccount" type="text" maxlength="30"
+                                        id="cpContent_txtUserBankAccount" placeholder="계좌번호 (숫자만 입력 가능)"
+                                        onkeypress="if ((event.keyCode < 48) || (event.keyCode > 57))  event.returnValue=false;"
+                                        required="true">
+                                    <input name="ctl00$cpContent$txtJoinCode" type="text" maxlength="20"
+                                        id="cpContent_txtJoinCode" placeholder="가입코드를 입력하세요">
+                                </div>
+                                <input type="submit" name="ctl00$cpContent$btnRegister" value="회원가입"
+                                    onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cpContent$btnRegister&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
+                                    id="cpContent_btnRegister" class="btn_register">
+                                <p>이미 비트프로 회원이시면 <a href="/Login.aspx">로그인</a>해주세요.</p>
+                            </section>
+
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                var Page_Validators = new Array(document.getElementById("cpContent_SomeFieldValidator"), document.getElementById("cpContent_comparePasswords"));
+                                //]]>
+                            </script>
+
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                var cpContent_SomeFieldValidator = document.all ? document.all["cpContent_SomeFieldValidator"] : document.getElementById("cpContent_SomeFieldValidator");
+                                cpContent_SomeFieldValidator.controltovalidate = "cpContent_txtUserId";
+                                cpContent_SomeFieldValidator.errormessage = "한글아이디는 사용할 수 없습니다.";
+                                cpContent_SomeFieldValidator.display = "Dynamic";
+                                cpContent_SomeFieldValidator.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+                                cpContent_SomeFieldValidator.validationexpression = "^[A-Za-z0-9]*$";
+                                var cpContent_comparePasswords = document.all ? document.all["cpContent_comparePasswords"] : document.getElementById("cpContent_comparePasswords");
+                                cpContent_comparePasswords.controltovalidate = "cpContent_txtPasswd2";
+                                cpContent_comparePasswords.errormessage = "비밀번호가 일치하지 않습니다.";
+                                cpContent_comparePasswords.display = "Dynamic";
+                                cpContent_comparePasswords.evaluationfunction = "CompareValidatorEvaluateIsValid";
+                                cpContent_comparePasswords.controltocompare = "cpContent_txtPasswd1";
+                                cpContent_comparePasswords.controlhookup = "cpContent_txtPasswd1";
+                                //]]>
+                            </script>
+
+
+                            <script type="text/javascript">
+                                //<![CDATA[
+
+                                var Page_ValidationActive = false;
+                                if (typeof (ValidatorOnLoad) == "function") {
+                                    ValidatorOnLoad();
+                                }
+
+                                function ValidatorOnSubmit() {
+                                    if (Page_ValidationActive) {
+                                        return ValidatorCommonOnSubmit();
+                                    }
+                                    else {
+                                        return true;
+                                    }
+                                }
+                                //]]>
+                            </script>
+                        </form>
+
+                        <!-- 메인컨텐츠 끝 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="positionCheck"></div>
+    <footer>
+        <div>
+            <div>
+                <h4></h4>
+                <ul>
+                    <li>모든 컨텐츠 저작권은 비트프로에 있으며, 무단도용시 법적 불이익을 받습니다.</li>
+                    <li>Copyright © 비트프로. All rights reserved</li>
+                    <li>
+                        <ol>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+
+            <ul>
+                <li>
+                    <b>파트너</b>
+                    <ol>
+                        <li><a href="https://www.binance.com">바이낸스</a></li>
+                        <li><a href="https://www.upbit.com">업비트</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <b>회사 소개</b>
+                    <ol>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="/Board/List.aspx?id=notice">공지사항</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">Open API 이용약관</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+
+        var rCnt = 0;
+        if (rCnt > 0 && window.location.href.indexOf("qna") < 0) {
+            Swal.fire('확인하지 않은 관리자 댓글이 있습니다.').then(function () {
+                window.location = './Board/List.html?id=qna';
+            })
+        }
+        var rCnt2 = 0;
+        if (rCnt2 > 0 && window.location.href.indexOf("message") < 0) {
+            Swal.fire('확인하지 않은 알림이 있습니다.').then(function () {
+                window.location = './Board/List.html?id=message';
+            })
+        }
+    </script>
+
+
+
+</body>
+
+</html>

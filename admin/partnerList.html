@@ -1,0 +1,1031 @@
+<html lang="ko" class=" ">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1440">
+    <meta name="robots" content="nosnippet">
+    <meta name="robots" content="noarchive">
+    <meta name="robots" content="noindex, nofollow">
+    <title>
+        비트프로 파트너페이지
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1440">
+    <link rel="icon" href="/Img/logo_small.png" type="image/gif" sizes="16x16">
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="./css/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="./css/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="./css/iCheck/green.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="./css/custom.min.css?d=20230518_911" rel="stylesheet">
+    <link href="./css/bitrevadmin.css?d=20230518_911" rel="stylesheet">
+    <style>
+        .buttons {
+            min-height: 200px;
+        }
+
+        #toast {
+            position: fixed;
+            min-width: 150px;
+            top: 50px;
+            right: 10px;
+            text-align: right;
+            z-index: 999999999999999;
+        }
+
+        #toast .toastWrap {
+            margin: 6px 0 0;
+            padding: 18px 0 15px;
+            display: none;
+        }
+
+        .toast {
+            border: 1px solid #F1D031;
+            color: #444;
+            background: #FFFFA3;
+            box-shadow: 0 2px 3px #999;
+            padding: 18px 20px 15px 8px;
+            text-align: left;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            font-family: arial;
+            font-size: 13px;
+            white-space: pre;
+            position: relative;
+        }
+
+        #toast b {
+            display: block;
+            position: absolute;
+            top: 3px;
+            right: 4px;
+            width: 12px;
+            height: 12px;
+            font: normal 12px/1 Arial, sans-serif;
+            text-align: right;
+            cursor: pointer;
+            text-shadow: #FFF 0 1px 0;
+        }
+
+        #toast b:before {
+            content: "\2716";
+        }
+
+        .timerWrap {
+            position: absolute;
+            bottom: 4px;
+            left: 4px;
+            overflow: hidden;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+
+        .timer {
+            display: block;
+            height: 4px;
+            width: 0;
+            background-color: #F1D031;
+        }
+    </style>
+
+</head>
+
+<body class="nav-md" id="toremoveonlogin">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0; margin-top: 20px;">
+                        <a href="Dashboard.html" class="site_title"><i class="">
+                            <img src="./images/logo.png"></i>
+                            <!-- <span><img src="./images/logo_text.png" class="img-responsive center-block dashboard-header-img"></span> -->
+                        </a>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                        </div>
+                        <div class="profile_info">
+                            <span>안녕하세요.</span>
+                            <h2>본사님</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+                    <br>
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section active">
+                            <ul class="nav side-menu">
+                                <li id="liHome" class="">
+                                    <a><i class="fa fa-home"></i>홈 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none;">
+                                        <li class="current-page"><a href="Dashboard.html">대시보드</a></li>
+                                    </ul>
+                                </li>
+
+                                <li id="liPartnerManagement">
+                                    <a><i class="fa fa-user"></i>파트너 관리 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="PartnerList.html">파트너 리스트</a></li>
+                                        <li><a href="JoinCode.html">가입코드 관리</a></li>
+
+                                    </ul>
+                                </li>
+                                <li id="liCommManagement">
+                                    <a><i class="fa fa-won"></i>커미션 관리 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li id="liCommBubon"><a href="CommissionListb.html">커미션 리스트 (부본사)</a></li>
+                                        <li id="liCommChong"><a href="CommissionListc.html">커미션 리스트 (총판)</a></li>
+                                        <li><a href="CommissionListd.html">커미션 리스트 (대리점)</a></li>
+                                        <li id="liCommBubon2"><a href="CommissionList2b.html">커미션2 리스트 (부본사)</a></li>
+                                        <li id="liCommChong2"><a href="CommissionList2c.html">커미션2 리스트 (총판)</a></li>
+                                        <li><a href="CommissionList2d.html">커미션2 리스트 (대리점)</a></li>
+                                        <li><a href="Withdraw.html">출금신청</a></li>
+                                    </ul>
+                                </li>
+                                <li id="liUserManagement">
+                                    <a><i class="fa fa-users"></i>회원 관리 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="MemberList.html">회원 리스트</a></li>
+                                        <li><a href="TradeList.html">회원 거래내역 리스트</a></li>
+                                        <li><a href="MemberLogList.html">회원 로그</a></li>
+                                    </ul>
+                                </li>
+                                <li id="liAdminOnly1">
+                                    <a><i class="fa fa-bank"></i>입출금 관리 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="BalancePartner.html">파트너 출금</a></li>
+                                        <li><a href="BalanceMember.html?dw=deposit">회원 입금</a></li>
+                                        <li><a href="BalanceMember.html?dw=withdraw">회원 출금</a></li>
+                                    </ul>
+                                </li>
+                                <li id="liAdminOnly2">
+                                    <a><i class="fa fa-list"></i>예수금 로그 관리 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="BalancePartnerLog.html">파트너 입출금 로그</a></li>
+                                        <li><a href="BalanceMemberLog.html">회원 입출금 로그</a></li>
+                                    </ul>
+                                </li>
+                                <li id="liCoinList" class="">
+                                    <a><i class="fa fa-bitcoin"></i>코인 관리 <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none;">
+                                        <li><a href="CoinInfoModify.html">코인 리스트</a></li>
+                                    </ul>
+                                </li>
+                                <li id="liCustomerService" class="">
+                                    <a><i class="fa fa-commenting-o"></i>고객 센터 <span
+                                            class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none;">
+                                        <li><a href="Board/Notice.html?id=notice">공지 관리</a></li>
+                                        <li><a href="MessageList.html">알림 관리</a></li>
+                                        <li><a href="InquiryList.html">1:1 문의</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /sidebar menu -->
+
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <nav class="nav navbar-nav">
+                        <ul class="navbar-right">
+                            <li class="nav-item dropdown open" style="padding-left: 15px;">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true"
+                                    id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">본사님
+                                </a>
+                                <div class="dropdown-menu dropdown-usermenu pull-right"
+                                    aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="PartnerInfoModify.html">정보수정</a>
+                                    <a class="dropdown-item" href="Logout.html"><i
+                                            class="fa fa-sign-out pull-right"></i>로그아웃</a>
+                                </div>
+                            </li>
+                            <li id="liMember" style="display: none"><a href="MemberList.html"><i
+                                        class="fa fa-user"></i></a></li>
+                            <li id="liQna" style="display: inline;"><a href="InquiryList.html"><i
+                                        class="fa fa-list"></i></a></li>
+
+                            <li id="liDeposit" style="display: none"><a href="BalanceMember.html?dw=deposit"><i
+                                        class="fa fa-arrow-down"></i></a></li>
+                            <li id="liWithdraw" style="display: none"><a href="BalanceMember.html?dw=withdraw"><i
+                                        class="fa fa-arrow-up"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <iframe id="iSound" style="display: none;"></iframe>
+
+            <form method="post" action="./PartnerList.html" id="form1">
+                <div class="aspNetHidden">
+                    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+                    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+                    <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+                    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                        value="/wEPDwUKMTE0NDQ4MzMyNw9kFgJmD2QWCgIFDxYCHgdWaXNpYmxlZ2QCBg8WAh8AZ2QCBw8WAh8AZ2QCCA8WAh8AZ2QCCQ9kFgICAQ9kFg4CAQ8QDxYCHwBnZBAVDwbsoITssrQFMDEyMzQGMTAyMDIwBGFiY2QGYXMxMTExB2JiYnRlc3QJYnVib250ZXN0C2J1bmJvbnRlc3QxCmZ3ZXdhZWZhd2UFaGgwMDEEaGgxMQZra3Rlc3QFa3Rlc3QJc3RhcmJ1Y2tzCnN0YXJkYWJhbmcVDwAFMDEyMzQGMTAyMDIwBGFiY2QGYXMxMTExB2JiYnRlc3QJYnVib250ZXN0C2J1bmJvbnRlc3QxCmZ3ZXdhZWZhd2UFaGgwMDEEaGgxMQZra3Rlc3QFa3Rlc3QJc3RhcmJ1Y2tzCnN0YXJkYWJhbmcUKwMPZ2dnZ2dnZ2dnZ2dnZ2dnFgFmZAIDDxYCHgRUZXh0BYDKAQ0KICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0iZXZlbiBwb2ludGVyIj4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj7rtoDrs7jsgqw8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPWJiYnRlc3QiPmJiYnRlc3Q8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj7rtoDrs7jsgqxf7YWM7Iqk7Yq4PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj7qta3rr7wg67aA67O47IKsX+2FjOyKpO2KuCAyMjIyMjIyMjIyMjIyPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+PGEgaHJlZj0jIG9uQ2xpY2s9InNldEl0ZW0oJ2JiYnRlc3QnLCAn67aA67O47IKsX+2FjOyKpO2KuCcpIiBkYXRhLXRvZ2dsZT0ibW9kYWwiIGRhdGEtdGFyZ2V0PSIjZXhhbXBsZU1vZGFsIj4yMyw0MjEuMzkyICQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+NTAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjM1Miw0MDIuOTYwICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiBsYXN0IiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MjAyMy0wOC0wMSDsmKTtm4QgMzo1MDowMDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0ib2RkIHBvaW50ZXIiPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PHNwYW4gc3R5bGU9J3BhZGRpbmctbGVmdDogMTVweDsnPuOEtCDstJ3tjJA8L3NwYW4+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPWNjY3Rlc3QiPmNjY3Rlc3Q8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPu2FjOyKpO2KuF/stJ3tjJA8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+6rWt66+8IO2FjOyKpO2KuF/stJ3tjJAgNDQ0NDQ0NDQ0NDQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCdjY2N0ZXN0JywgJ+2FjOyKpO2KuF/stJ3tjJAnKSIgZGF0YS10b2dnbGU9Im1vZGFsIiBkYXRhLXRhcmdldD0iI2V4YW1wbGVNb2RhbCI+MTUsNjE0LjI2MSAkPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MzUyLDQwMi45NjAgJDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiBsYXN0IiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MjAyMy0wOC0wMSDsmKTtm4QgMzo1MTowMDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJldmVuIHBvaW50ZXIiPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPuu2gOuzuOyCrDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PGEgaHJlZj0iL1BhcnRuZXJNb2RpZnkuYXNweD9wYXJ0bmVySWQ9a2t0ZXN0Ij5ra3Rlc3Q8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj7thYzsiqTtirg8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjMgMSAxPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+PGEgaHJlZj0jIG9uQ2xpY2s9InNldEl0ZW0oJ2trdGVzdCcsICfthYzsiqTtirgnKSIgZGF0YS10b2dnbGU9Im1vZGFsIiBkYXRhLXRhcmdldD0iI2V4YW1wbGVNb2RhbCI+MC4wMDAgJDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij43MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MC4wMDAgJDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTA4LTE3IOyYpO2bhCA5OjExOjAwPC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJvZGQgcG9pbnRlciI+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48c3BhbiBzdHlsZT0ncGFkZGluZy1sZWZ0OiAxNXB4Oyc+44S0IOy0ne2MkDwvc3Bhbj48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PGEgaHJlZj0iL1BhcnRuZXJNb2RpZnkuYXNweD9wYXJ0bmVySWQ9a2t0ZXN0Y3AiPmtrdGVzdGNwPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj5jcHRlc3Q8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+MSAxIDE8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCdra3Rlc3RjcCcsICdjcHRlc3QnKSIgZGF0YS10b2dnbGU9Im1vZGFsIiBkYXRhLXRhcmdldD0iI2V4YW1wbGVNb2RhbCI+MC4wMDAgJDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjMwICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAuMDAwICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgbGFzdCIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjIwMjMtMDgtMTcg7Jik7ZuEIDk6MTM6MDA8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0iZXZlbiBwb2ludGVyIj4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj7rtoDrs7jsgqw8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPWhoMTEiPmhoMTE8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj7thYzsiqTtirg8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPiAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+PGEgaHJlZj0jIG9uQ2xpY2s9InNldEl0ZW0oJ2hoMTEnLCAn7YWM7Iqk7Yq4JykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjAuMDAwICQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MC4wMDAgJDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjYwICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiBsYXN0IiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MjAyMy0wOC0xOCDsmKTsoIQgMjowMTowMDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0ib2RkIHBvaW50ZXIiPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PHNwYW4gc3R5bGU9J3BhZGRpbmctbGVmdDogMTVweDsnPuOEtCDstJ3tjJA8L3NwYW4+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPWFhMDAxIj5hYTAwMTwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPiAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij48YSBocmVmPSMgb25DbGljaz0ic2V0SXRlbSgnYWEwMDEnLCAnJykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjAuMDAwICQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAuMDAwICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjUwICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTA4LTE4IOyYpOyghCAyOjQwOjAwPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0ib2RkIHBvaW50ZXIiPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PHNwYW4gc3R5bGU9J3BhZGRpbmctbGVmdDogMTVweDsnPuOEtCDstJ3tjJA8L3NwYW4+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPWFhMDAyIj5hYTAwMjwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPiAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij48YSBocmVmPSMgb25DbGljaz0ic2V0SXRlbSgnYWEwMDInLCAnJykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjAuMDAwICQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAuMDAwICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjMwICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTA4LTE4IOyYpOyghCAyOjI2OjAwPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0ib2RkIHBvaW50ZXIiPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PHNwYW4gc3R5bGU9J3BhZGRpbmctbGVmdDogMTVweDsnPuOEtCDstJ3tjJA8L3NwYW4+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPWFhMTEiPmFhMTE8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj4gIDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+PGEgaHJlZj0jIG9uQ2xpY2s9InNldEl0ZW0oJ2FhMTEnLCAnJykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjAuMDAwICQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAuMDAwICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgbGFzdCIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjIwMjMtMDgtMTgg7Jik7KCEIDI6MTA6MDA8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJvZGQgcG9pbnRlciI+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48c3BhbiBzdHlsZT0ncGFkZGluZy1sZWZ0OiAxNXB4Oyc+44S0IOy0ne2MkDwvc3Bhbj48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PGEgaHJlZj0iL1BhcnRuZXJNb2RpZnkuYXNweD9wYXJ0bmVySWQ9YWEyMiI+YWEyMjwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+YXdlZmF3ZWY8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+ICA8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCdhYTIyJywgJ2F3ZWZhd2VmJykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjAuMDAwICQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAuMDAwICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjMwICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTA4LTE4IOyYpOyghCAyOjI2OjAwPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJvZGQgcG9pbnRlciI+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxzcGFuIHN0eWxlPSdwYWRkaW5nLWxlZnQ6IDMwcHg7Jz7jhLQg64yA66as7KCQPC9zcGFuPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPWFhMjIxMjM0Ij5hYTIyMTIzNDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj5hYTIyMTIzNDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPiAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCdhYTIyMTIzNCcsICdhYTIyMTIzNCcpIiBkYXRhLXRvZ2dsZT0ibW9kYWwiIGRhdGEtdGFyZ2V0PSIjZXhhbXBsZU1vZGFsIj4wLjAwMCAkPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MC4wMDAgJDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTEwLTExIOyYpO2bhCAxMDo1MzowMDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0iZXZlbiBwb2ludGVyIj4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj7rtoDrs7jsgqw8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPWhoMDAxIj5oaDAwMTwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+ICA8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij48YSBocmVmPSMgb25DbGljaz0ic2V0SXRlbSgnaGgwMDEnLCAnJykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjAuMDAwICQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MC4wMDAgJDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTA4LTE4IOyYpOyghCAyOjA1OjAwPC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0iZXZlbiBwb2ludGVyIj4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj7rtoDrs7jsgqw8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPWZ3ZXdhZWZhd2UiPmZ3ZXdhZWZhd2U8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPiAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+PGEgaHJlZj0jIG9uQ2xpY2s9InNldEl0ZW0oJ2Z3ZXdhZWZhd2UnLCAnJykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjAuMDAwICQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+NjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAuMDAwICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgbGFzdCIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjIwMjMtMDgtMTgg7Jik7KCEIDI6MDg6MDA8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJldmVuIHBvaW50ZXIiPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPuu2gOuzuOyCrDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PGEgaHJlZj0iL1BhcnRuZXJNb2RpZnkuYXNweD9wYXJ0bmVySWQ9a3Rlc3QiPmt0ZXN0PC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+MTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+MSAxIDE8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij48YSBocmVmPSMgb25DbGljaz0ic2V0SXRlbSgna3Rlc3QnLCAnMScpIiBkYXRhLXRvZ2dsZT0ibW9kYWwiIGRhdGEtdGFyZ2V0PSIjZXhhbXBsZU1vZGFsIj4wLjAwMCAkPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAuMDAwICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiBsYXN0IiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MjAyMy0wOC0xOCDsmKTsoIQgMjoxMzowMDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICA8dHIgY2xhc3M9ImV2ZW4gcG9pbnRlciI+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+67aA67O47IKsPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48YSBocmVmPSIvUGFydG5lck1vZGlmeS5hc3B4P3BhcnRuZXJJZD1hczExMTEiPmFzMTExMTwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPnNlcmdzZXJnPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj4gIDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCdhczExMTEnLCAnc2VyZ3NlcmcnKSIgZGF0YS10b2dnbGU9Im1vZGFsIiBkYXRhLXRhcmdldD0iI2V4YW1wbGVNb2RhbCI+MC4wMDAgJDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij42MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MC4wMDAgJDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjMwICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiBsYXN0IiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MjAyMy0wOC0xOCDsmKTsoIQgMjoyNTowMDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICA8dHIgY2xhc3M9ImV2ZW4gcG9pbnRlciI+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+67aA67O47IKsPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48YSBocmVmPSIvUGFydG5lck1vZGlmeS5hc3B4P3BhcnRuZXJJZD1zdGFyYnVja3MiPnN0YXJidWNrczwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPmFkbWluPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj4wIDAgMDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCdzdGFyYnVja3MnLCAnYWRtaW4nKSIgZGF0YS10b2dnbGU9Im1vZGFsIiBkYXRhLXRhcmdldD0iI2V4YW1wbGVNb2RhbCI+NDYsNzk5LjU2MiAkPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjgwICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4xNjksNzQ2Ljk2NyAkPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgbGFzdCIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjIwMjMtMDgtMTgg7Jik7KCEIDI6NDM6MDA8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgICAgICAgICA8dHIgY2xhc3M9Im9kZCBwb2ludGVyIj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxzcGFuIHN0eWxlPSdwYWRkaW5nLWxlZnQ6IDE1cHg7Jz7jhLQg7LSd7YyQPC9zcGFuPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48YSBocmVmPSIvUGFydG5lck1vZGlmeS5hc3B4P3BhcnRuZXJJZD1zdGFyMSI+c3RhcjE8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPnN0YXI8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+MCAwIDA8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCdzdGFyMScsICdzdGFyJykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjY2LDQzNi4wMTggJDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjUwICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjE2OSw3NDYuOTY3ICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgbGFzdCIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjIwMjMtMDgtMTgg7Jik7KCEIDI6NDY6MDA8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dHIgY2xhc3M9Im9kZCBwb2ludGVyIj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PHNwYW4gc3R5bGU9J3BhZGRpbmctbGVmdDogMzBweDsnPuOEtCDrjIDrpqzsoJA8L3NwYW4+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PGEgaHJlZj0iL1BhcnRuZXJNb2RpZnkuYXNweD9wYXJ0bmVySWQ9c3RhcjExIj5zdGFyMTE8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+ICA8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+PGEgaHJlZj0jIG9uQ2xpY2s9InNldEl0ZW0oJ3N0YXIxMScsICcnKSIgZGF0YS10b2dnbGU9Im1vZGFsIiBkYXRhLXRhcmdldD0iI2V4YW1wbGVNb2RhbCI+MC4wMDAgJDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4xNjksNzQ2Ljk2NyAkPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiBsYXN0IiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MjAyMy0xMC0xNSDsmKTsoIQgOToxNDowMDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0iZXZlbiBwb2ludGVyIj4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj7rtoDrs7jsgqw8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPXN0YXJkYWJhbmciPnN0YXJkYWJhbmc8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj5zdGFyZGFiYW5nPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj4wIDAgMDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCdzdGFyZGFiYW5nJywgJ3N0YXJkYWJhbmcnKSIgZGF0YS10b2dnbGU9Im1vZGFsIiBkYXRhLXRhcmdldD0iI2V4YW1wbGVNb2RhbCI+OSwwMTMuMzIxICQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+NDcyLjIwMSAkPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+NzAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTA4LTE4IOyYpOyghCA2OjMwOjAwPC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJvZGQgcG9pbnRlciI+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48c3BhbiBzdHlsZT0ncGFkZGluZy1sZWZ0OiAxNXB4Oyc+44S0IOy0ne2MkDwvc3Bhbj48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PGEgaHJlZj0iL1BhcnRuZXJNb2RpZnkuYXNweD9wYXJ0bmVySWQ9c3RhcjIiPnN0YXIyPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj5zdGFyMjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj4wIDAgMDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+PGEgaHJlZj0jIG9uQ2xpY2s9InNldEl0ZW0oJ3N0YXIyJywgJ3N0YXIyJykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjMsNjA1LjMyOCAkPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij40NzIuMjAxICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjIwICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTA4LTE4IOyYpOyghCA2OjQ1OjAwPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICA8dHIgY2xhc3M9ImV2ZW4gcG9pbnRlciI+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+67aA67O47IKsPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48YSBocmVmPSIvUGFydG5lck1vZGlmeS5hc3B4P3BhcnRuZXJJZD1idWJvbnRlc3QiPmJ1Ym9udGVzdDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+ICA8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij48YSBocmVmPSMgb25DbGljaz0ic2V0SXRlbSgnYnVib250ZXN0JywgJycpIiBkYXRhLXRvZ2dsZT0ibW9kYWwiIGRhdGEtdGFyZ2V0PSIjZXhhbXBsZU1vZGFsIj4wLjAwMCAkPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAuMDAwICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiBsYXN0IiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MjAyMy0xMC0xMiDsmKTtm4QgMTE6MDA6MDA8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJldmVuIHBvaW50ZXIiPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPuu2gOuzuOyCrDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PGEgaHJlZj0iL1BhcnRuZXJNb2RpZnkuYXNweD9wYXJ0bmVySWQ9YnVuYm9udGVzdDEiPmJ1bmJvbnRlc3QxPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj4gIDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCdidW5ib250ZXN0MScsICcnKSIgZGF0YS10b2dnbGU9Im1vZGFsIiBkYXRhLXRhcmdldD0iI2V4YW1wbGVNb2RhbCI+MC4wMDAgJDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wLjAwMCAkPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+NzAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTEwLTEyIOyYpO2bhCAxMTowMDowMDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICA8dHIgY2xhc3M9ImV2ZW4gcG9pbnRlciI+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+67aA67O47IKsPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48YSBocmVmPSIvUGFydG5lck1vZGlmeS5hc3B4P3BhcnRuZXJJZD0wMTIzNCI+MDEyMzQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj5hczwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+ICA8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij48YSBocmVmPSMgb25DbGljaz0ic2V0SXRlbSgnMDEyMzQnLCAnYXMnKSIgZGF0YS10b2dnbGU9Im1vZGFsIiBkYXRhLXRhcmdldD0iI2V4YW1wbGVNb2RhbCI+MSwxODIuMjMwICQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+NzAsNDU0Ljg3MCAkPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+ODAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTEwLTEyIOyYpO2bhCAxMTowMTowMDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0ib2RkIHBvaW50ZXIiPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PHNwYW4gc3R5bGU9J3BhZGRpbmctbGVmdDogMTVweDsnPuOEtCDstJ3tjJA8L3NwYW4+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPTAxMjM0NSI+MDEyMzQ1PC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj5hczwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj4gIDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+PGEgaHJlZj0jIG9uQ2xpY2s9InNldEl0ZW0oJzAxMjM0NScsICdhcycpIiBkYXRhLXRvZ2dsZT0ibW9kYWwiIGRhdGEtdGFyZ2V0PSIjZXhhbXBsZU1vZGFsIj4xLDM0OS41ODAgJDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+NzAsNDU0Ljg3MCAkPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij41MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiBsYXN0IiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MjAyMy0xMC0xMiDsmKTtm4QgMTE6MDI6MDA8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dHIgY2xhc3M9Im9kZCBwb2ludGVyIj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PHNwYW4gc3R5bGU9J3BhZGRpbmctbGVmdDogMzBweDsnPuOEtCDrjIDrpqzsoJA8L3NwYW4+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PGEgaHJlZj0iL1BhcnRuZXJNb2RpZnkuYXNweD9wYXJ0bmVySWQ9MDEyMzQ1NiI+MDEyMzQ1NjwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj5hczwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPiAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCcwMTIzNDU2JywgJ2FzJykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjYyOS44MDQgJDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjcwLDQ1NC44NzAgJDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTEwLTEyIOyYpO2bhCAxMTowMzowMDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0iZXZlbiBwb2ludGVyIj4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj7rtoDrs7jsgqw8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPWFiY2QiPmFiY2Q8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj5hYmNkPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj4gIDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCdhYmNkJywgJ2FiY2QnKSIgZGF0YS10b2dnbGU9Im1vZGFsIiBkYXRhLXRhcmdldD0iI2V4YW1wbGVNb2RhbCI+NiwxMDEuOTY1ICQ8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+NzAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjc1LDUyNy4zMTYgJDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTEwLTEzIOyYpO2bhCAzOjQ4OjAwPC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJvZGQgcG9pbnRlciI+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48c3BhbiBzdHlsZT0ncGFkZGluZy1sZWZ0OiAxNXB4Oyc+44S0IOy0ne2MkDwvc3Bhbj48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PGEgaHJlZj0iL1BhcnRuZXJNb2RpZnkuYXNweD9wYXJ0bmVySWQ9YWJjZGUiPmFiY2RlPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj5hYmNkZTwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj4gIDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+PGEgaHJlZj0jIG9uQ2xpY2s9InNldEl0ZW0oJ2FiY2RlJywgJ2FiY2RlJykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjcsNTgzLjI1NCAkPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+NDAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+NzUsNTI3LjMxNiAkPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTEwLTEzIOyYpO2bhCAzOjQ5OjAwPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJvZGQgcG9pbnRlciI+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxzcGFuIHN0eWxlPSdwYWRkaW5nLWxlZnQ6IDMwcHg7Jz7jhLQg64yA66as7KCQPC9zcGFuPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxhIGhyZWY9Ii9QYXJ0bmVyTW9kaWZ5LmFzcHg/cGFydG5lcklkPWFiY2RlZiI+YWJjZGVmPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPmFiY2RlZjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPiAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjxhIGhyZWY9IyBvbkNsaWNrPSJzZXRJdGVtKCdhYmNkZWYnLCAnYWJjZGVmJykiIGRhdGEtdG9nZ2xlPSJtb2RhbCIgZGF0YS10YXJnZXQ9IiNleGFtcGxlTW9kYWwiPjU1Mi42OTkgJDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MjAgJTwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij43NSw1MjcuMzE2ICQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTEwLTEzIOyYpO2bhCAzOjUwOjAwPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgICAgICAgICA8dHIgY2xhc3M9Im9kZCBwb2ludGVyIj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPjxzcGFuIHN0eWxlPSdwYWRkaW5nLWxlZnQ6IDE1cHg7Jz7jhLQg7LSd7YyQPC9zcGFuPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48YSBocmVmPSIvUGFydG5lck1vZGlmeS5hc3B4P3BhcnRuZXJJZD1ra2tra2siPmtra2trazwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPiAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij48YSBocmVmPSMgb25DbGljaz0ic2V0SXRlbSgna2tra2trJywgJycpIiBkYXRhLXRvZ2dsZT0ibW9kYWwiIGRhdGEtdGFyZ2V0PSIjZXhhbXBsZU1vZGFsIj4wLjAwMCAkPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wLjAwMCAkPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iIGxhc3QiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4yMDIzLTEwLTE0IOyYpOyghCAxMjoxMTowMDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJldmVuIHBvaW50ZXIiPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPuu2gOuzuOyCrDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0iICI+PGEgaHJlZj0iL1BhcnRuZXJNb2RpZnkuYXNweD9wYXJ0bmVySWQ9MTAyMDIwIj4xMDIwMjA8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIj48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiPiAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+PGEgaHJlZj0jIG9uQ2xpY2s9InNldEl0ZW0oJzEwMjAyMCcsICcnKSIgZGF0YS10b2dnbGU9Im1vZGFsIiBkYXRhLXRhcmdldD0iI2V4YW1wbGVNb2RhbCI+MC4wMDAgJDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wICU8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9IiAiIHN0eWxlPSJ0ZXh0LWFsaWduOnJpZ2h0Ij4wLjAwMCAkPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgIiBzdHlsZT0idGV4dC1hbGlnbjpyaWdodCI+MCAlPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSIgbGFzdCIgc3R5bGU9InRleHQtYWxpZ246cmlnaHQiPjIwMjQtMDItMjUg7Jik7KCEIDQ6NDA6MDA8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgZAIFDxYCHwEFDTE4MiwyODkuNDE1ICRkAgcPFgIfAQUSPHN0cm9uZz4xPC9zdHJvbmc+ZAIJDxYCHwEFCeu2gOuzuOyCrGQCCw8WAh8BBQMxMDBkAg0PFgIfAQUDMTAwZGSbDVTrhd7NjTCtBD5qbv8xjCoM0xv23wAQUf8xoFHK/A==">
+                </div>
+
+                <script type="text/javascript">
+                    //<![CDATA[
+                    var theForm = document.forms['form1'];
+                    if (!theForm) {
+                        theForm = document.form1;
+                    }
+                    function __doPostBack(eventTarget, eventArgument) {
+                        if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                            theForm.__EVENTTARGET.value = eventTarget;
+                            theForm.__EVENTARGUMENT.value = eventArgument;
+                            theForm.submit();
+                        }
+                    }
+                    //]]>
+                </script>
+
+
+                <div class="aspNetHidden">
+
+                    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8D466D5A">
+                    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                        value="/wEdABk+7gD1fBe/YV46sRpwyR/+8hJNO0Ok3vv6lV72oqxtho8dxWokyxCeCsjT6cY3AXIWr/tZnnZCvF4bMJs9my0uit4D1xYxxQgx8tAUgIGvyH4K+zKCgxJke320/SzjiUSpQRlbjh7YCPkbkP+sSM8N5syb1q/HOXc4o7Ksvn7em0d7Tp4aOSkO/oLaEMB/rNSkI6G2rrQGIpO9IUUqL92SLoi/BHZ9mcVaygGHATyNO2YnIXreeBMz4evuFaF0I5bwntLRaNLcVKf6OqkPMrI8PeIi82cvYH/CByPWLdhFj58oCQtF523K4yVBaqFJNTP/u/ovBsqRqS4ZQ3EZH9Jdj/V4kr1loepFqSFFe9KVQxFL0STV+GRq2RmuvTq6pjltAFTMRTwR3lTlmZyVDHxBZEci/VQ7+ZhSXD6qF/d6B1Yb+9+pGWmtc26FZA/pvgrpAL/Q5/DCdnuXvXxt4RIezJMVJNkirJAjSzvcNIe48LT/L7HguGfHza6rdbZMCObRPV4R8grQaLEvgB9S5KcJzLpVp+hcF5TkK/TU7GvpAJ6bzimRj4nTg+dqw0iih1E=">
+                </div>
+                <!-- page content -->
+                <div class="right_col" role="main" style="min-height: 2319px;">
+                    <div class="page-title">
+                        <div class="title_left">
+                            <h3>파트너 관리</h3>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="col-md-12 col-sm-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>파트너 리스트</h2>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content">
+                                <div class="form-inline">
+                                    <select name="ctl00$MainContent$ddlBubon"
+                                        onchange="javascript:setTimeout('__doPostBack(\'ctl00$MainContent$ddlBubon\',\'\')', 0)"
+                                        id="MainContent_ddlBubon" class="form-control">
+                                        <option selected="selected" value="">전체</option>
+                                        <option value="01234">01234</option>
+                                        <option value="102020">102020</option>
+                                        <option value="abcd">abcd</option>
+                                        <option value="as1111">as1111</option>
+                                        <option value="bbbtest">bbbtest</option>
+                                        <option value="bubontest">bubontest</option>
+                                        <option value="bunbontest1">bunbontest1</option>
+                                        <option value="fwewaefawe">fwewaefawe</option>
+                                        <option value="hh001">hh001</option>
+                                        <option value="hh11">hh11</option>
+                                        <option value="kktest">kktest</option>
+                                        <option value="ktest">ktest</option>
+                                        <option value="starbucks">starbucks</option>
+                                        <option value="stardabang">stardabang</option>
+
+                                    </select>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped jambo_table bulk_action">
+                                        <thead>
+                                            <tr class="headings">
+                                                <th class="column-title">등급</th>
+                                                <th class="column-title">아이디</th>
+                                                <th class="column-title">이름</th>
+                                                <th class="column-title">계좌정보</th>
+                                                <th class="column-title" style="text-align: right">현재잔고</th>
+                                                <th class="column-title" style="text-align: right">커미션1</th>
+                                                <th class="column-title" style="text-align: right">회원보유잔고</th>
+                                                <th class="column-title" style="text-align: right">커미션2</th>
+                                                <th class="column-title" style="text-align: right">가입일</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a
+                                                        href="PartnerModify.html?partnerId=bbbtest">bbbtest</a></td>
+                                                <td class=" ">부본사_테스트</td>
+                                                <td class=" ">국민 부본사_테스트 2222222222222</td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('bbbtest', '부본사_테스트')" data-toggle="modal"
+                                                        data-target="#exampleModal">23,421.392 $</a></td>
+                                                <td class=" " style="text-align:right">50 %</td>
+                                                <td class=" " style="text-align:right">352,402.960 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-01 오후 3:50:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 15px;">ㄴ 총판</span></td>
+                                                <td class=" "><a
+                                                        href="PartnerModify.html?partnerId=ccctest">ccctest</a></td>
+                                                <td class=" ">테스트_총판</td>
+                                                <td class=" ">국민 테스트_총판 44444444444</td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('ccctest', '테스트_총판')" data-toggle="modal"
+                                                        data-target="#exampleModal">15,614.261 $</a></td>
+                                                <td class=" " style="text-align:right">20 %</td>
+                                                <td class=" " style="text-align:right">352,402.960 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-01 오후 3:51:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=kktest">kktest</a>
+                                                </td>
+                                                <td class=" ">테스트</td>
+                                                <td class=" ">3 1 1</td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('kktest', '테스트')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">70 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-17 오후 9:11:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 15px;">ㄴ 총판</span></td>
+                                                <td class=" "><a
+                                                        href="PartnerModify.html?partnerId=kktestcp">kktestcp</a></td>
+                                                <td class=" ">cptest</td>
+                                                <td class=" ">1 1 1</td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('kktestcp', 'cptest')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">30 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-17 오후 9:13:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=hh11">hh11</a></td>
+                                                <td class=" ">테스트</td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('hh11', '테스트')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">60 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 2:01:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 15px;">ㄴ 총판</span></td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=aa001">aa001</a>
+                                                </td>
+                                                <td class=" "></td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('aa001', '')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">50 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 2:40:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 15px;">ㄴ 총판</span></td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=aa002">aa002</a>
+                                                </td>
+                                                <td class=" "></td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('aa002', '')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">30 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 2:26:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 15px;">ㄴ 총판</span></td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=aa11">aa11</a></td>
+                                                <td class=" "></td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('aa11', '')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 2:10:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 15px;">ㄴ 총판</span></td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=aa22">aa22</a></td>
+                                                <td class=" ">awefawef</td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('aa22', 'awefawef')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">30 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 2:26:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 30px;">ㄴ 대리점</span></td>
+                                                <td class=" "><a
+                                                        href="PartnerModify.html?partnerId=aa221234">aa221234</a></td>
+                                                <td class=" ">aa221234</td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('aa221234', 'aa221234')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">20 %</td>
+                                                <td class=" last" style="text-align:right">2023-10-11 오후 10:53:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=hh001">hh001</a>
+                                                </td>
+                                                <td class=" "></td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('hh001', '')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 2:05:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a
+                                                        href="PartnerModify.html?partnerId=fwewaefawe">fwewaefawe</a>
+                                                </td>
+                                                <td class=" "></td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('fwewaefawe', '')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">60 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">20 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 2:08:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=ktest">ktest</a>
+                                                </td>
+                                                <td class=" ">1</td>
+                                                <td class=" ">1 1 1</td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('ktest', '1')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 2:13:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=as1111">as1111</a>
+                                                </td>
+                                                <td class=" ">sergserg</td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('as1111', 'sergserg')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">60 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">30 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 2:25:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a
+                                                        href="PartnerModify.html?partnerId=starbucks">starbucks</a>
+                                                </td>
+                                                <td class=" ">admin</td>
+                                                <td class=" ">0 0 0</td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('starbucks', 'admin')" data-toggle="modal"
+                                                        data-target="#exampleModal">46,799.562 $</a></td>
+                                                <td class=" " style="text-align:right">80 %</td>
+                                                <td class=" " style="text-align:right">169,746.967 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 2:43:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 15px;">ㄴ 총판</span></td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=star1">star1</a>
+                                                </td>
+                                                <td class=" ">star</td>
+                                                <td class=" ">0 0 0</td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('star1', 'star')" data-toggle="modal"
+                                                        data-target="#exampleModal">66,436.018 $</a></td>
+                                                <td class=" " style="text-align:right">50 %</td>
+                                                <td class=" " style="text-align:right">169,746.967 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 2:46:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 30px;">ㄴ 대리점</span></td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=star11">star11</a>
+                                                </td>
+                                                <td class=" "></td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('star11', '')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">20 %</td>
+                                                <td class=" " style="text-align:right">169,746.967 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-10-15 오전 9:14:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a
+                                                        href="PartnerModify.html?partnerId=stardabang">stardabang</a>
+                                                </td>
+                                                <td class=" ">stardabang</td>
+                                                <td class=" ">0 0 0</td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('stardabang', 'stardabang')"
+                                                        data-toggle="modal" data-target="#exampleModal">9,013.321 $</a>
+                                                </td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">472.201 $</td>
+                                                <td class=" " style="text-align:right">70 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 6:30:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 15px;">ㄴ 총판</span></td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=star2">star2</a>
+                                                </td>
+                                                <td class=" ">star2</td>
+                                                <td class=" ">0 0 0</td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('star2', 'star2')" data-toggle="modal"
+                                                        data-target="#exampleModal">3,605.328 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">472.201 $</td>
+                                                <td class=" " style="text-align:right">20 %</td>
+                                                <td class=" last" style="text-align:right">2023-08-18 오전 6:45:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a
+                                                        href="PartnerModify.html?partnerId=bubontest">bubontest</a>
+                                                </td>
+                                                <td class=" "></td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('bubontest', '')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-10-12 오후 11:00:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a
+                                                        href="PartnerModify.html?partnerId=bunbontest1">bunbontest1</a>
+                                                </td>
+                                                <td class=" "></td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('bunbontest1', '')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">70 %</td>
+                                                <td class=" last" style="text-align:right">2023-10-12 오후 11:00:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=01234">01234</a>
+                                                </td>
+                                                <td class=" ">as</td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('01234', 'as')" data-toggle="modal"
+                                                        data-target="#exampleModal">1,182.230 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">70,454.870 $</td>
+                                                <td class=" " style="text-align:right">80 %</td>
+                                                <td class=" last" style="text-align:right">2023-10-12 오후 11:01:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 15px;">ㄴ 총판</span></td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=012345">012345</a>
+                                                </td>
+                                                <td class=" ">as</td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('012345', 'as')" data-toggle="modal"
+                                                        data-target="#exampleModal">1,349.580 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">70,454.870 $</td>
+                                                <td class=" " style="text-align:right">50 %</td>
+                                                <td class=" last" style="text-align:right">2023-10-12 오후 11:02:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 30px;">ㄴ 대리점</span></td>
+                                                <td class=" "><a
+                                                        href="PartnerModify.html?partnerId=0123456">0123456</a></td>
+                                                <td class=" ">as</td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('0123456', 'as')" data-toggle="modal"
+                                                        data-target="#exampleModal">629.804 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">70,454.870 $</td>
+                                                <td class=" " style="text-align:right">20 %</td>
+                                                <td class=" last" style="text-align:right">2023-10-12 오후 11:03:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=abcd">abcd</a></td>
+                                                <td class=" ">abcd</td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('abcd', 'abcd')" data-toggle="modal"
+                                                        data-target="#exampleModal">6,101.965 $</a></td>
+                                                <td class=" " style="text-align:right">70 %</td>
+                                                <td class=" " style="text-align:right">75,527.316 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-10-13 오후 3:48:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 15px;">ㄴ 총판</span></td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=abcde">abcde</a>
+                                                </td>
+                                                <td class=" ">abcde</td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('abcde', 'abcde')" data-toggle="modal"
+                                                        data-target="#exampleModal">7,583.254 $</a></td>
+                                                <td class=" " style="text-align:right">40 %</td>
+                                                <td class=" " style="text-align:right">75,527.316 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-10-13 오후 3:49:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 30px;">ㄴ 대리점</span></td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=abcdef">abcdef</a>
+                                                </td>
+                                                <td class=" ">abcdef</td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('abcdef', 'abcdef')" data-toggle="modal"
+                                                        data-target="#exampleModal">552.699 $</a></td>
+                                                <td class=" " style="text-align:right">20 %</td>
+                                                <td class=" " style="text-align:right">75,527.316 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-10-13 오후 3:50:00</td>
+                                            </tr>
+
+                                            <tr class="odd pointer">
+                                                <td class=" "><span style="padding-left: 15px;">ㄴ 총판</span></td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=kkkkkk">kkkkkk</a>
+                                                </td>
+                                                <td class=" "></td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('kkkkkk', '')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2023-10-14 오전 12:11:00</td>
+                                            </tr>
+
+                                            <tr class="even pointer">
+                                                <td class=" ">부본사</td>
+                                                <td class=" "><a href="PartnerModify.html?partnerId=102020">102020</a>
+                                                </td>
+                                                <td class=" "></td>
+                                                <td class=" "> </td>
+                                                <td class=" " style="text-align:right"><a href="#"
+                                                        onclick="setItem('102020', '')" data-toggle="modal"
+                                                        data-target="#exampleModal">0.000 $</a></td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" " style="text-align:right">0.000 $</td>
+                                                <td class=" " style="text-align:right">0 %</td>
+                                                <td class=" last" style="text-align:right">2024-02-25 오전 4:40:00</td>
+                                            </tr>
+
+                                            <tr class="totalrow">
+                                                <td colspan="4" class="totaltd">현재 총 잔액</td>
+                                                <td class="totaltd" style="text-align: right">
+                                                    182,289.415 $
+                                                </td>
+                                                <td colspan="4"></td>
+                                            </tr>
+                                        </tbody>
+
+
+                                    </table>
+                                </div>
+                                <div class="paging">
+                                    <strong>1</strong>
+                                </div>
+
+                            </div>
+
+                            <!-- form-->
+
+
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 ">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>
+                                            부본사
+                                            추가 (최대커미션 : <font color="red">
+                                                100</font>)
+                                            100
+                                        </h2>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+
+                                        <div class="item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                for="first-name">
+                                                아이디 <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 ">
+                                                <input name="ctl00$MainContent$txtPartnerId" type="text"
+                                                    id="MainContent_txtPartnerId" class="form-control"
+                                                    placeholder="아이디를 입력하세요.">
+                                            </div>
+                                        </div>
+                                        <div class="item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                                비밀번호 <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 ">
+                                                <input name="ctl00$MainContent$txtPasswd" type="text"
+                                                    id="MainContent_txtPasswd" class="form-control"
+                                                    placeholder="비밀번호를 입력하세요.">
+                                            </div>
+                                        </div>
+                                        <div class="item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                                커미션 1 <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 ">
+                                                <input name="ctl00$MainContent$txtCommision" type="text"
+                                                    id="MainContent_txtCommision" class="form-control"
+                                                    placeholder="커미션1을 입력하세요.">
+                                            </div>
+                                        </div>
+                                        <div class="item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                                커미션 2 <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 ">
+                                                <input name="ctl00$MainContent$txtCommision2" type="text"
+                                                    id="MainContent_txtCommision2" class="form-control"
+                                                    placeholder="커미션2을 입력하세요.">
+                                            </div>
+                                        </div>
+                                        <div class="ln_solid"></div>
+                                        <div class="item form-group">
+                                            <div class="col-md-6 col-sm-6 offset-md-3">
+                                                <input type="submit" name="ctl00$MainContent$btnRegister" value="파트너 추가"
+                                                    id="MainContent_btnRegister" class="btn btn-success">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <!-- /page content -->
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                현재 적립금에 추가됩니다. (마이너스 입력시 차감)
+                                <br>
+                                <br>
+                                <input type="hidden" name="ctl00$MainContent$hdnPartnerId" id="hdnPartnerId">
+                                <div class="field item form-group">
+                                    <label class="col-form-label col-md-3 col-sm-3  label-align">추가 USDT</label>
+                                    <input name="ctl00$MainContent$txtAmount" type="text" id="MainContent_txtAmount"
+                                        class="form-control">
+                                </div>
+                                <div class="field item form-group">
+                                    <label class="col-form-label col-md-3 col-sm-3  label-align">메모</label>
+                                    <input name="ctl00$MainContent$txtMemo" type="text" id="MainContent_txtMemo"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="submit" name="ctl00$MainContent$btnBalanceSave" value="잔고반영"
+                                    id="MainContent_btnBalanceSave" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Modal -->
+            </form>
+
+
+
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    Bitbns
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="./Scripts/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./Scripts/dist/bootstrap.bundle.min.js"></script>
+    <script src="./Scripts/fastclick/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="./Scripts/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="./Scripts/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="./Scripts/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="./Scripts/bootstrap-progressbar.min.js"></script>
+
+    <!-- Flot -->
+    <!-- <script src="./Scripts/Flot/jquery.flot.js"></script>
+    <script src="./Scripts/Flot/jquery.flot.pie.js"></script>
+    <script src="./Scripts/Flot/jquery.flot.time.js"></script>
+    <script src="./Scripts/Flot/jquery.flot.stack.js"></script>
+    <script src="./Scripts/Flot/jquery.flot.resize.js"></script> -->
+    <!-- Flot plugins -->
+    <script src="./Scripts/Flot/jquery.flot.orderBars.js"></script>
+    <script src="./Scripts/Flot/jquery.flot.spline.min.js"></script>
+    <script src="./Scripts/Flot/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="./Scripts/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="./Scripts/dist/jquery.vmap.js"></script>
+    <script src="./Scripts/dist/jquery.vmap.world.js"></script>
+    <script src="./Scripts/dist/jquery.vmap.sampledata.js"></script>
+
+
+    <!-- Custom Theme Scripts -->
+    <script src="./Scripts/custom.min.js"></script>
+
+    <script>
+        // 부트스트랩 css 반응형 때문에 추가함
+        $(document).ready(function () {
+            $('meta[name="viewport"]').prop('content', 'width=1440');
+        });
+        function CheckAlarm() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/AlarmCheck.html');
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var msg = xhr.responseText;
+
+                    var deposit = document.getElementById('liDeposit');
+                    var withdraw = document.getElementById('liWithdraw');
+                    var qna = document.getElementById('liQna');
+                    var member = document.getElementById('liMember');
+
+                    // 회원가입
+                    if (msg.indexOf('member') > -1) {
+                        member.style.display = 'inline';
+                        var audio1 = new Audio("/Sound/member.mp3");
+                        audio1.loop = false; // 반복재생하지 않음
+                        audio1.volume = 1; // 음량 설정
+                        audio1.play(); // sound2.mp3 재생
+                    }
+                    else {
+                        member.style.display = 'none';
+                    }
+
+                    // 문의글
+                    if (msg.indexOf('qna') > -1) {
+                        qna.style.display = 'inline';
+                        var audio2 = new Audio("/Sound/inquiry.mp3");
+                        audio2.loop = false; // 반복재생하지 않음
+                        audio2.volume = 1; // 음량 설정
+                        audio2.play(); // sound2.mp3 재생
+                    }
+                    else {
+                        qna.style.display = 'none';
+                    }
+
+                    // 출금
+                    if (msg.indexOf('withdraw') > -1) {
+                        withdraw.style.display = 'inline';
+                        var audio3 = new Audio("/Sound/withdraw.mp3");
+                        audio3.loop = false; // 반복재생하지 않음
+                        audio3.volume = 1; // 음량 설정
+                        audio3.play(); // sound2.mp3 재생
+                    }
+                    else {
+                        withdraw.style.display = 'none';
+                    }
+
+                    // 입금
+                    if (msg.indexOf('deposit') > -1) {
+                        deposit.style.display = 'inline';
+                        var audio4 = new Audio("/Sound/deposit.mp3");
+                        audio4.loop = false; // 반복재생하지 않음
+                        audio4.volume = 1; // 음량 설정
+                        audio4.play(); // sound2.mp3 재생
+                    }
+                    else {
+                        deposit.style.display = 'none';
+                    }
+
+                }
+            }
+            xhr.send();
+        }
+        CheckAlarm();
+        playAlert = setInterval(function () {
+            CheckAlarm();
+        }, 30000);
+        //clearInterval(playAlert);
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,521 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nosnippet">
+    <meta name="robots" content="noarchive">
+    <meta name="robots" content="noindex, nofollow">
+    <title>bit-pro</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../js/jquery-latest.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/custom.js"></script>
+
+    <link rel="stylesheet" href="../css/import.css">
+
+</head>
+
+<body>
+    <article class="headerArticle">
+        <header>
+            <div>
+                <h1>
+                    <a href="../index.html"></a>
+                </h1>
+
+                <nav>
+                    <ul>
+
+                        <li><a href="../Trading.html">거래소</a></li>
+                        <li><a href="../TradeList.html">거래내역</a></li>
+                        <li><a href="../Balance.html">입출금</a></li>
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="qna1.html">고객센터</a></li>
+
+                    </ul>
+                </nav>
+
+                <div>
+                    <ul>
+                        <li><a class="mb-tp">292.45 USDT</a></li>
+                        <li class="userTarget"><a><i class="fa fa-user"></i> d</a>
+                            <ol>
+                                <li><a href="/Board/List.html?id=modify">개인정보 수정</a></li>
+                                <li><a href="/Board/List.html?id=message">메세지 함</a></li>
+                                <li><a href="/Logout.html" onclick="Logout()">로그아웃</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <div class="pcSwitch">
+                        <input type="checkbox" id="modeSwitch">
+                        <label for="modeSwitch"><span></span></label>
+                    </div>
+
+                    <input type="button" value="gnbToggle" data-panel="gnbPanel" id="gnbBtn">
+                </div>
+            </div>
+
+            <nav id="gnbPanel">
+                <input type="button" value="close" class="closeBtn">
+                <ul>
+                    <li><a class="mb-tp">292.45 USDT</a></li>
+                    <li class="userTarget"><a><i class="fa fa-user"></i> d</a>
+                        <ol>
+                            <li><a href="/Board/List.html?id=modify">개인정보 수정</a></li>
+                            <li><a href="/Board/List.html?id=message">메세지 함</a></li>
+                            <li><a href="/Logout.html" onclick="Logout()">로그아웃</a></li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li><a href="/Board/List.html?id=modify">개인정보 수정</a></li>
+                    <li><a href="/Board/List.html?id=message">메세지 함</a></li>
+                    <li><a href="/Logout.html" onclick="Logout()">로그아웃</a></li>
+                </ul>
+
+                <ul>
+
+                    <li><a href="/Trading.html">거래소</a></li>
+                    <li><a href="/TradeList.html">거래내역</a></li>
+                    <li><a href="/Balance.html">입출금</a></li>
+                    <li><a href="/Board/List.html?id=notice">공지사항</a></li>
+                    <li><a href="/Board/List.html?id=qna">고객센터</a></li>
+                </ul>
+
+                <ol id="slideToggle">
+                    <li>
+                        <div>
+                            <span>Theme</span>
+                            <input type="checkbox" id="modeSwitch2">
+                            <label for="modeSwitch2"><span></span></label>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </header>
+    </article>
+
+    <div class="subRouteContent">
+        <div class="wrapper">
+            <div class="sub-contents-layout">
+                <div class="frameWrapper">
+                    <div class="_layer_background"></div>
+                    <div class="invest_wrap">
+                        <!-- 메인컨텐츠 시작 -->
+
+                        <section id="cpContent_title2" class="qnaContainer">
+                            <div>
+                                <ul>
+                                    <li id="menuQna" data-tabnumb="qnaTab1" class="active"><a href="qna1.html">1:1문의</a></li>
+                                    <li id="menuMessage" data-tabnumb="qnaTab2"><a href="message.html">메세지함</a></li>
+                                    <li id="menuModify" data-tabnumb="qnaTab3"><a href="modify.html">개인정보수정</a></li>
+                                </ul>
+
+                                <div id="qna" class="tabPage active">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>제목</th>
+                                                <th>작성자</th>
+                                                <th>작성일자</th>
+                                                <th>상태</th>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="View.html">계좌 문의
+                                                        <span><span></span></span></a></td>
+                                                <td>d</td>
+                                                <td>2024-05-29 오후 4:25:36</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="View.html">계좌 문의
+                                                        <span><span></span></span></a></td>
+                                                <td>d</td>
+                                                <td>2024-05-20 오후 7:50:48</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <a href="write.html">문의하기</a>
+                                    <div class="pagenation">
+                                        <ol>
+                                            <li><a href="/Board/List.html?id=qna&amp;page=1" class="active">1</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <!-- 1:1 문의 -->
+
+                                <div id="message" class="tabPage">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>제목</th>
+                                                <th>작성자</th>
+                                                <th>작성일자</th>
+                                                <th>상태</th>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=278&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>d</td>
+                                                <td>2024-05-29 오후 4:25:36</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=277&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>코인솔루션테스트11</td>
+                                                <td>2024-05-27 오후 1:39:37</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=276&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>코인솔루션테스트11</td>
+                                                <td>2024-05-27 오후 1:39:35</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=275&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>코인솔루션테스트11</td>
+                                                <td>2024-05-27 오전 8:59:11</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=274&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>d</td>
+                                                <td>2024-05-20 오후 7:50:48</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=273&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>코인솔루션테스트1</td>
+                                                <td>2024-05-10 오후 4:31:47</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=272&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>코인솔루션</td>
+                                                <td>2024-05-07 오후 12:23:48</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=26&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>김태수</td>
+                                                <td>2024-01-09 오후 5:13:45</td>
+                                                <td>미확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=25&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>김태수</td>
+                                                <td>2024-01-09 오후 4:40:44</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=24&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>111111</td>
+                                                <td>2024-01-09 오전 8:25:44</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=23&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>111111</td>
+                                                <td>2023-12-17 오후 9:24:18</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=22&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>111111</td>
+                                                <td>2023-12-17 오후 9:18:28</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=21&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>111111</td>
+                                                <td>2023-12-17 오후 8:33:14</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=20&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>111111</td>
+                                                <td>2023-12-15 오후 2:15:39</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=19&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>TEST3</td>
+                                                <td>2023-12-09 오후 9:53:42</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=18&amp;page=1">거래관련 문의</a>
+                                                </td>
+                                                <td>1</td>
+                                                <td>2023-12-06 오후 10:56:36</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=17&amp;page=1">기타 문의</a>
+                                                </td>
+                                                <td>1</td>
+                                                <td>2023-12-06 오후 10:55:25</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=16&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>111111</td>
+                                                <td>2023-11-09 오전 9:18:35</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><a href="/Board/View.html?id=qna&amp;rno=15&amp;page=1">계좌 문의</a>
+                                                </td>
+                                                <td>111111</td>
+                                                <td>2023-11-09 오전 9:18:16</td>
+                                                <td>확인</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <div class="pagenation">
+                                        <ol>
+                                            <li><a href="/Board/List.html?id=qna&amp;page=1" class="active">1</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <!-- 메세지함 -->
+
+                                <div id="modify" class="tabPage">
+                                    <form method="post" action="./List.html?id=qna" id="form1">
+                                        <div class="aspNetHidden">
+                                            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                                                value="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jCDrrLjsnZggPHNwYW4+PHNwYW4+PC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD5kPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjIwMjQtMDUtMjkg7Jik7ZuEIDQ6MjU6MzY8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+7ZmV7J24PC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0cj4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjxhIGhyZWY9Jy9Cb2FyZC9WaWV3LmFzcHg/aWQ9cW5hJnJubz0yNzQmcGFnZT0xJz7qs4Tsoowg66y47J2YIDxzcGFuPjxzcGFuPjwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+ZDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD4yMDI0LTA1LTIwIOyYpO2bhCA3OjUwOjQ4PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPu2ZleyduDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICBkAgMPFgIfAAVGPGxpPjxhIGhyZWY9Jy9Cb2FyZC9MaXN0LmFzcHg/aWQ9cW5hJnBhZ2U9MScgY2xhc3M9ImFjdGl2ZSI+MTwvYT48L2xpPmQCBQ8WAh8ABc8rDQogICAgICAgICAgICAgICAgPHRyPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+PGEgaHJlZj0nL0JvYXJkL1ZpZXcuYXNweD9pZD1xbmEmcm5vPTI3OCZwYWdlPTEnPuqzhOyijCDrrLjsnZg8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPmQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+MjAyNC0wNS0yOSDsmKTtm4QgNDoyNTozNjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD7tmZXsnbg8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgPHRyPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+PGEgaHJlZj0nL0JvYXJkL1ZpZXcuYXNweD9pZD1xbmEmcm5vPTI3NyZwYWdlPTEnPuqzhOyijCDrrLjsnZg8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPuy9lOyduOyGlOujqOyFmO2FjOyKpO2KuDExPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjIwMjQtMDUtMjcg7Jik7ZuEIDE6Mzk6Mzc8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+7ZmV7J24PC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0cj4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjxhIGhyZWY9Jy9Cb2FyZC9WaWV3LmFzcHg/aWQ9cW5hJnJubz0yNzYmcGFnZT0xJz7qs4Tsoowg66y47J2YPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD7svZTsnbjshpTro6jshZjthYzsiqTtirgxMTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD4yMDI0LTA1LTI3IOyYpO2bhCAxOjM5OjM1PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPu2ZleyduDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICA8dHI+DQogICAgICAgICAgICAgICAgICAgIDx0ZD48YSBocmVmPScvQm9hcmQvVmlldy5hc3B4P2lkPXFuYSZybm89Mjc1JnBhZ2U9MSc+6rOE7KKMIOusuOydmDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+7L2U7J247IaU66Oo7IWY7YWM7Iqk7Yq4MTE8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+MjAyNC0wNS0yNyDsmKTsoIQgODo1OToxMTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD7tmZXsnbg8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgPHRyPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+PGEgaHJlZj0nL0JvYXJkL1ZpZXcuYXNweD9pZD1xbmEmcm5vPTI3NCZwYWdlPTEnPuqzhOyijCDrrLjsnZg8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPmQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+MjAyNC0wNS0yMCDsmKTtm4QgNzo1MDo0ODwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD7tmZXsnbg8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgPHRyPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+PGEgaHJlZj0nL0JvYXJkL1ZpZXcuYXNweD9pZD1xbmEmcm5vPTI3MyZwYWdlPTEnPuqzhOyijCDrrLjsnZg8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPuy9lOyduOyGlOujqOyFmO2FjOyKpO2KuDE8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+MjAyNC0wNS0xMCDsmKTtm4QgNDozMTo0NzwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD7tmZXsnbg8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgPHRyPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+PGEgaHJlZj0nL0JvYXJkL1ZpZXcuYXNweD9pZD1xbmEmcm5vPTI3MiZwYWdlPTEnPuqzhOyijCDrrLjsnZg8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPuy9lOyduOyGlOujqOyFmDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD4yMDI0LTA1LTA3IOyYpO2bhCAxMjoyMzo0ODwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD7tmZXsnbg8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgPHRyPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+PGEgaHJlZj0nL0JvYXJkL1ZpZXcuYXNweD9pZD1xbmEmcm5vPTI2JnBhZ2U9MSc+6rOE7KKMIOusuOydmDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+6rmA7YOc7IiYPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjIwMjQtMDEtMDkg7Jik7ZuEIDU6MTM6NDU8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+66+47ZmV7J24PC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0cj4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjxhIGhyZWY9Jy9Cb2FyZC9WaWV3LmFzcHg/aWQ9cW5hJnJubz0yNSZwYWdlPTEnPuqzhOyijCDrrLjsnZg8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPuq5gO2DnOyImDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD4yMDI0LTAxLTA5IOyYpO2bhCA0OjQwOjQ0PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPu2ZleyduDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICA8dHI+DQogICAgICAgICAgICAgICAgICAgIDx0ZD48YSBocmVmPScvQm9hcmQvVmlldy5hc3B4P2lkPXFuYSZybm89MjQmcGFnZT0xJz7qs4Tsoowg66y47J2YPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD4xMTExMTE8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+MjAyNC0wMS0wOSDsmKTsoIQgODoyNTo0NDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD7tmZXsnbg8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgPHRyPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+PGEgaHJlZj0nL0JvYXJkL1ZpZXcuYXNweD9pZD1xbmEmcm5vPTIzJnBhZ2U9MSc+6rOE7KKMIOusuOydmDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+MTExMTExPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjIwMjMtMTItMTcg7Jik7ZuEIDk6MjQ6MTg8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+7ZmV7J24PC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0cj4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjxhIGhyZWY9Jy9Cb2FyZC9WaWV3LmFzcHg/aWQ9cW5hJnJubz0yMiZwYWdlPTEnPuqzhOyijCDrrLjsnZg8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjExMTExMTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD4yMDIzLTEyLTE3IOyYpO2bhCA5OjE4OjI4PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPu2ZleyduDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICA8dHI+DQogICAgICAgICAgICAgICAgICAgIDx0ZD48YSBocmVmPScvQm9hcmQvVmlldy5hc3B4P2lkPXFuYSZybm89MjEmcGFnZT0xJz7qs4Tsoowg66y47J2YPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD4xMTExMTE8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+MjAyMy0xMi0xNyDsmKTtm4QgODozMzoxNDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD7tmZXsnbg8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgPHRyPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+PGEgaHJlZj0nL0JvYXJkL1ZpZXcuYXNweD9pZD1xbmEmcm5vPTIwJnBhZ2U9MSc+6rOE7KKMIOusuOydmDwvYT48L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+MTExMTExPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjIwMjMtMTItMTUg7Jik7ZuEIDI6MTU6Mzk8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+7ZmV7J24PC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0cj4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjxhIGhyZWY9Jy9Cb2FyZC9WaWV3LmFzcHg/aWQ9cW5hJnJubz0xOSZwYWdlPTEnPuqzhOyijCDrrLjsnZg8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPlRFU1QzPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjIwMjMtMTItMDkg7Jik7ZuEIDk6NTM6NDI8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+7ZmV7J24PC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0cj4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjxhIGhyZWY9Jy9Cb2FyZC9WaWV3LmFzcHg/aWQ9cW5hJnJubz0xOCZwYWdlPTEnPuqxsOuemOq0gOugqCDrrLjsnZg8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjE8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+MjAyMy0xMi0wNiDsmKTtm4QgMTA6NTY6MzY8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+7ZmV7J24PC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0cj4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjxhIGhyZWY9Jy9Cb2FyZC9WaWV3LmFzcHg/aWQ9cW5hJnJubz0xNyZwYWdlPTEnPuq4sO2DgCDrrLjsnZg8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjE8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+MjAyMy0xMi0wNiDsmKTtm4QgMTA6NTU6MjU8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+7ZmV7J24PC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDx0cj4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjxhIGhyZWY9Jy9Cb2FyZC9WaWV3LmFzcHg/aWQ9cW5hJnJubz0xNiZwYWdlPTEnPuqzhOyijCDrrLjsnZg8L2E+PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPjExMTExMTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD4yMDIzLTExLTA5IOyYpOyghCA5OjE4OjM1PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPu2ZleyduDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICA8dHI+DQogICAgICAgICAgICAgICAgICAgIDx0ZD48YSBocmVmPScvQm9hcmQvVmlldy5hc3B4P2lkPXFuYSZybm89MTUmcGFnZT0xJz7qs4Tsoowg66y47J2YPC9hPjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD4xMTExMTE8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+MjAyMy0xMS0wOSDsmKTsoIQgOToxODoxNjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD7tmZXsnbg8L3RkPg0KICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgZAIHDxYCHwAFRjxsaT48YSBocmVmPScvQm9hcmQvTGlzdC5hc3B4P2lkPXFuYSZwYWdlPTEnIGNsYXNzPSJhY3RpdmUiPjE8L2E+PC9saT5kAgkPZBYIAgUPDxYCHwAFATBkZAIHDw8WAh8ABRTthYzsiqTtirgg7Luk66+47IWYMWRkAgkPDxYCHwAFBTAwMDAwZGQCCw8PFgIfAGVkZAIDDxYCHgdWaXNpYmxlaGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgMFJmN0bDAwJGNwQ29udGVudCRyYWRpb1VzZXJTa2lwT3JkZXJUcnVlBSZjdGwwMCRjcENvbnRlbnQkcmFkaW9Vc2VyU2tpcE9yZGVyVHJ1ZQUnY3RsMDAkY3BDb250ZW50JHJhZGlvVXNlclNraXBPcmRlckZhbHNlFjTCqLZLtA5VaUvn8EPHgSxl7WdZ++2GzhC3yIK/ztA=">
+                                        </div>
+
+                                        <div class="aspNetHidden">
+
+                                            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR"
+                                                value="13D55D11">
+                                            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                                                value="/wEdAApkyIuMmV38OPvFFCWQejYrVKVYPPC+Y6eboEOXIj8SKJwPc8Uyz2DgUiCitL8tNt97wgLFzxyoa60+l82cZTpXbdsqe8sXnec5JKUVOeyaWZOLqFVmoxpPEcg+/6E4nxLgvzly4asOdzAe9psJsngJzr4Bb7Q2wxAI8/PW9P1e/W5MW78fiXXRVWBBjSh9lSJIPdUQ4URqKXxmVxSOAN/zjoWi9ikHkTft1VUeIvzk2FjfsxOp109C9ReBXDarA6A=">
+                                        </div>
+                                        <div>
+                                            <dl class="input_list">
+                                                <dd>
+                                                    <input name="ctl00$cpContent$txtUserPass" type="password"
+                                                        id="cpContent_txtUserPass" placeholder="비밀번호 입력">
+                                                </dd>
+                                            </dl>
+                                            <dl class="input_list">
+                                                <dd>
+                                                    <input name="ctl00$cpContent$txtUserPass2" type="password"
+                                                        id="cpContent_txtUserPass2" placeholder="비밀번호 확인">
+                                                </dd>
+                                            </dl>
+                                            <dl class="input_list">
+                                                <dd>
+                                                    <input name="ctl00$cpContent$txtUserBankName" type="text" value="0"
+                                                        readonly="readonly" id="cpContent_txtUserBankName"
+                                                        placeholder="은행명">
+                                                </dd>
+                                            </dl>
+                                            <dl class="input_list">
+                                                <dd>
+                                                    <input name="ctl00$cpContent$txtUserBankAccountName" type="text"
+                                                        value="테스트 커미션1" readonly="readonly"
+                                                        id="cpContent_txtUserBankAccountName" placeholder="은행이름">
+                                                </dd>
+                                            </dl>
+                                            <dl class="input_list">
+                                                <dd>
+                                                    <input name="ctl00$cpContent$txtUserBankAccount" type="text"
+                                                        value="00000" readonly="readonly"
+                                                        id="cpContent_txtUserBankAccount" placeholder="계좌번호">
+                                                </dd>
+                                            </dl>
+                                            <p style="color: red">* 계좌변경은 1:1 문의에서 가능합니다.</p>
+                                            <label for="editPerAccountField">전용 영구계좌 번호</label>
+                                            <dl class="input_list">
+                                                <dd>
+                                                    <input name="ctl00$cpContent$txtUserLifetimeAccount" type="text"
+                                                        readonly="readonly" id="cpContent_txtUserLifetimeAccount"
+                                                        placeholder="입금신청에서 발급 가능">
+                                                </dd>
+                                            </dl>
+                                            <span class="skipOrder"><input id="cpContent_radioUserSkipOrderTrue"
+                                                    type="radio" name="ctl00$cpContent$SkipOrder"
+                                                    value="radioUserSkipOrderTrue"><label
+                                                    for="cpContent_radioUserSkipOrderTrue">자동진입</label></span>
+                                            <span class="skipOrder skip_r"><input id="cpContent_radioUserSkipOrderFalse"
+                                                    type="radio" name="ctl00$cpContent$SkipOrder"
+                                                    value="radioUserSkipOrderFalse" checked="checked"><label
+                                                    for="cpContent_radioUserSkipOrderFalse">확인진입</label></span>
+
+                                            <input type="submit" name="ctl00$cpContent$ctl00" value="정보수정"
+                                                class="btn_register">
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- 개인정보 수정 -->
+
+                            </div>
+                        </section>
+
+
+                        <!-- 메인컨텐츠 끝 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            tabMenu(".qnaContainer div ul li", ".qnaContainer div .tabPage");
+        });
+
+        function tabMenu(target, tabPage) {
+            $(target).click(function () {
+                var activeTab = $(this).attr("data-tabNumb");
+
+                $(target).removeClass("active");
+                $(this).addClass("active");
+
+                $(tabPage).removeClass("active");
+                $("#" + activeTab).addClass("active");
+            });
+        }
+        /* tabMenu active */
+
+        var searchParams = new URLSearchParams(window.location.search);
+        var id = searchParams.get("id");
+        if (id == "qna" || id == "message") {
+            if (id == "qna") {
+                $("#menuQna").addClass('active');
+                $("#qna").addClass('active');
+            } else if (id == "message") {
+                $("#menuMessage").addClass('active');
+                $("#message").addClass('active');
+            }
+        }
+        if (id == "modify") {
+            $("#menuModify").addClass('active');
+            $("#modify").addClass('active');
+        }
+
+        if (id == "notice")
+            $("#menuNotice").addClass('active');
+        if (id == "event")
+            $("#menuEvent").addClass('active');
+        if (id == "news")
+            $("#menuNews").addClass('active');
+        if (id == "faq")
+            $("#menuFaq").addClass('active');
+    </script>
+
+    <div id="positionCheck"></div>
+
+    <footer>
+        <div>
+            <div>
+                <h4></h4>
+                <ul>
+                    <li>모든 컨텐츠 저작권은 비트프로에 있으며, 무단도용시 법적 불이익을 받습니다.</li>
+                    <li>Copyright © 비트프로. All rights reserved</li>
+                    <li>
+                        <ol>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+
+            <ul>
+                <li>
+                    <b>파트너</b>
+                    <ol>
+                        <li><a href="https://www.binance.com">바이낸스</a></li>
+                        <li><a href="https://www.upbit.com">업비트</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <b>회사 소개</b>
+                    <ol>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="/Board/List.html?id=notice">공지사항</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">Open API 이용약관</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+
+        var rCnt = 0;
+        if (rCnt > 0 && window.location.href.indexOf("qna") < 0) {
+            Swal.fire('확인하지 않은 관리자 댓글이 있습니다.').then(function () {
+                window.location = '/Board/List.html?id=qna';
+            })
+        }
+        var rCnt2 = 0;
+        if (rCnt2 > 0 && window.location.href.indexOf("message") < 0) {
+            Swal.fire('확인하지 않은 알림이 있습니다.').then(function () {
+                window.location = '/Board/List.html?id=message';
+            })
+        }
+    </script>
+
+</body>
+
+</html>

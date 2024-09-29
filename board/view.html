@@ -1,0 +1,295 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nosnippet">
+    <meta name="robots" content="noarchive">
+    <meta name="robots" content="noindex, nofollow">
+    <title>bit-pro</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../js/jquery-latest.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/custom.js"></script>
+
+    <link rel="stylesheet" href="../css/import.css">
+
+</head>
+
+<body>
+    <article class="headerArticle">
+        <header>
+            <div>
+                <h1>
+                    <a href="index.html"></a>
+                </h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="../Trading.html">거래소</a></li>
+                        <li><a href="../TradeList.html">거래내역</a></li>
+                        <li><a href="../Balance.html">입출금</a></li>
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="qna1.html">고객센터</a></li>
+
+                    </ul>
+                </nav>
+
+                <div>
+                    <ul>
+                        <li><a class="mb-tp">292.45 USDT</a></li>
+                        <li class="userTarget"><a><i class="fa fa-user"></i> d</a>
+                            <ol>
+                                <li><a href="./Board/List.html?id=modify">개인정보 수정</a></li>
+                                <li><a href="./Board/List.html?id=message">메세지 함</a></li>
+                                <li><a href="Logout.html" onclick="Logout()">로그아웃</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <div class="pcSwitch">
+                        <input type="checkbox" id="modeSwitch">
+                        <label for="modeSwitch"><span></span></label>
+                    </div>
+
+                    <input type="button" value="gnbToggle" data-panel="gnbPanel" id="gnbBtn">
+                </div>
+            </div>
+
+
+
+            <nav id="gnbPanel">
+                <input type="button" value="close" class="closeBtn">
+                <ul>
+                    <li><a class="mb-tp">292.45 USDT</a></li>
+                    <li class="userTarget"><a><i class="fa fa-user"></i> d</a>
+                        <ol>
+                            <li><a href="./Board/List.html?id=modify">개인정보 수정</a></li>
+                            <li><a href="./Board/List.html?id=message">메세지 함</a></li>
+                            <li><a href="Logout.html" onclick="Logout()">로그아웃</a></li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li><a href="./Board/List.html?id=modify">개인정보 수정</a></li>
+                    <li><a href="./Board/List.html?id=message">메세지 함</a></li>
+                    <li><a href="Logout.html" onclick="Logout()">로그아웃</a></li>
+                </ul>
+
+                <ul>
+
+                    <li><a href="Trading.html">거래소</a></li>
+                    <li><a href="TradeList.html">거래내역</a></li>
+                    <li><a href="Balance.html">입출금</a></li>
+                    <li><a href="./Board/List.html?id=notice">공지사항</a></li>
+                    <li><a href="./Board/List.html?id=qna">고객센터</a></li>
+
+
+                </ul>
+
+
+
+                <ol id="slideToggle">
+                    <li>
+                        <div>
+                            <span>Theme</span>
+                            <input type="checkbox" id="modeSwitch2">
+                            <label for="modeSwitch2"><span></span></label>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </header>
+    </article>
+
+    <form method="post" action="./View.html?id=qna&amp;rno=282&amp;page=1" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="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">
+        </div>
+
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="42551BB6">
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                value="/wEdAAne46c+aAYN7BvhMJgE3DMZ+1n/n5L/h+8R+H5PeybT58bjs17kAIMVFqqFAL64dIPXY5QYJG17Kct7ZnHjeF5dMC6ovDULoIfUZH0nmnfonpum2lHSesEizJOm3E6cTrKiDC9TAtrD8weNPUfE0XMOWgIukHTjZfWxyEXepx63KO6TSXoP+WXiIr6bxfTIxnjllm3+Pd5WMMjDde9IOrUCpy2E/Sj1t3RnN5vuuvxf3A==">
+        </div>
+
+
+
+
+        <div class="subRouteContent">
+            <div class="wrapper">
+                <div class="sub-contents-layout">
+                    <div class="frameWrapper">
+                        <div class="_layer_background"></div>
+                        <div class="invest_wrap">
+                            <!-- 메인컨텐츠 시작 -->
+
+                            <section id="title" class="qnaContainer">
+                                <div>
+                                    <ul>
+                                        <li id="cpContent_menuQna" data-tabnumb="qnaTab1" class="active"><a
+                                                href="./Board/qna1.html">1:1 문의</a></li>
+                                        <li id="cpContent_menuMessage" data-tabnumb="qnaTab2"><a
+                                                href="./Board/message.html">메세지함</a></li>
+                                        <li id="cpContent_menuModify" data-tabnumb="qnaTab3"><a
+                                                href="./Board/modify.html">개인정보 수정</a></li>
+
+
+                                    </ul>
+
+                                    <div class="qnaViewBox">
+                                        <p>
+                                            계좌 문의
+                                        </p>
+                                        <span>
+                                            d
+                                        </span>
+                                        <span>
+                                            2024-05-29 오후 6:03:45
+                                        </span>
+                                        <div id="text_conts">입금전용계좌 문의합니다
+                                        </div>
+                                    </div>
+
+                                    <!-- 본문 -->
+
+                                    <div id="cpContent_commentList" class="qnaReplyList">
+                                        <ul>
+
+                                        </ul>
+
+                                    </div>
+
+                                    <!-- 댓글 목록 -->
+                                    <div id="cpContent_commentWrite" class="qnaReplyBox">
+                                        <textarea name="ctl00$cpContent$txtContent" rows="2" cols="20"
+                                            id="cpContent_txtContent" class="required"
+                                            placeholder="내용을 입력해 주세요"></textarea>
+
+                                        <input type="submit" name="ctl00$cpContent$btnSave" value="댓글등록"
+                                            onclick="clickCheck(this);" id="cpContent_btnSave"
+                                            class="btn_basic btn_red btn_upload">
+                                    </div>
+                                    <!-- 댓글 작성창 -->
+
+
+
+                                    <a class="btn_1" href="/Board/List.html?id=qna&amp;rno=282&amp;page=1">목록</a>
+                                    <!-- 댓글 목록 버튼 -->
+                                </div>
+                            </section>
+
+
+                            <!-- 메인컨텐츠 끝 -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        var searchParams = new URLSearchParams(window.location.search);
+        var id = searchParams.get("id");
+
+        if (id == "notice" || id == "event" || id == "news" || id == "faq")
+            $("#title").attr("class", "noticeContainer");
+        else
+            $("#title").attr("class", "qnaContainer");
+
+        if (id == "qna") {
+            $("#menuQna").addClass('active');
+            $("#cpContent_menuQna").addClass('active');
+        }
+        if (id == "message") {
+            $("#menuMessage").addClass('active');
+            $("#cpContent_menuMessage").addClass('active');
+        }
+        if (id == "modify") {
+            $("#menuModify").addClass('active');
+            $("#cpContent_menuModify").addClass('active');
+        }
+
+        if (id == "notice") {
+            $("#menuNotice").addClass('active');
+            $("#cpContent_menuNotice").addClass('active');
+        }
+        if (id == "faq") {
+            $("#menuFaq").addClass('active');
+            $("#cpContent_menuFaq").addClass('active');
+        }
+
+    </script>
+
+
+    <div id="positionCheck"></div>
+    <footer>
+        <div>
+            <div>
+                <h4></h4>
+                <ul>
+                    <li>모든 컨텐츠 저작권은 비트프로에 있으며, 무단도용시 법적 불이익을 받습니다.</li>
+                    <li>Copyright © 비트프로. All rights reserved</li>
+                    <li>
+                        <ol>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+
+            <ul>
+                <li>
+                    <b>파트너</b>
+                    <ol>
+                        <li><a href="https://www.binance.com">바이낸스</a></li>
+                        <li><a href="https://www.upbit.com">업비트</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <b>회사 소개</b>
+                    <ol>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="/Board/List.html?id=notice">공지사항</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">Open API 이용약관</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+
+        var rCnt = 0;
+        if (rCnt > 0 && window.location.href.indexOf("qna") < 0) {
+            Swal.fire('확인하지 않은 관리자 댓글이 있습니다.').then(function () {
+                window.location = '/Board/List.html?id=qna';
+            })
+        }
+        var rCnt2 = 0;
+        if (rCnt2 > 0 && window.location.href.indexOf("message") < 0) {
+            Swal.fire('확인하지 않은 알림이 있습니다.').then(function () {
+                window.location = '/Board/List.html?id=message';
+            })
+        }
+    </script>
+
+
+
+</body>
+
+</html>

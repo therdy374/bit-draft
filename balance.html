@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nosnippet">
+    <meta name="robots" content="noarchive">
+    <meta name="robots" content="noindex, nofollow">
+    <title>bit-pro</title>
+
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./js/jquery-latest.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/custom.js"></script>
+
+    <link rel="stylesheet" href="./css/import.css">
+
+</head>
+
+<body>
+    <article class="headerArticle">
+        <header>
+            <div>
+                <h1>
+                    <a href="index.html"></a>
+                </h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="Trading.html">거래소</a></li>
+                        <li><a href="TradeList.html">거래내역</a></li>
+                        <li><a href="Balance.html">입출금</a></li>
+                        <li><a href="Board/notice.html">공지사항</a></li>
+                        <li><a href="Board/qna1.html">고객센터</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <ul>
+                        <li><a class="mb-tp">292.45 USDT</a></li>
+                        <li class="userTarget">
+                            <a><i class="fa fa-user"></i> d</a>
+                            <ol>
+                                <li>
+                                    <a href="Board/List.html?id=modify">개인정보 수정</a>
+                                </li>
+                                <li><a href="Board/List.html?id=message">메세지 함</a></li>
+                                <li>
+                                    <a href="Logout.html" onclick="Logout()">로그아웃</a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <div class="pcSwitch">
+                        <input type="checkbox" id="modeSwitch" />
+                        <label for="modeSwitch"><span></span></label>
+                    </div>
+
+                    <input type="button" value="gnbToggle" data-panel="gnbPanel" id="gnbBtn" />
+                </div>
+            </div>
+
+            <nav id="gnbPanel">
+                <input type="button" value="close" class="closeBtn" />
+                <ul>
+                    <li><a class="mb-tp">292.45 USDT</a></li>
+                    <li class="userTarget">
+                        <a><i class="fa fa-user"></i> d</a>
+                        <ol>
+                            <li><a href="./Board/modify.html">개인정보 수정</a></li>
+                            <li><a href="./Board/message.html">메세지 함</a></li>
+                            <li><a href="Logout.html" onclick="Logout()">로그아웃</a></li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li><a href="./Board/modify.html">개인정보 수정</a></li>
+                    <li><a href="./Board/message.html">메세지 함</a></li>
+                    <li><a href="Logout.html" onclick="Logout()">로그아웃</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="Trading.html">거래소</a></li>
+                    <li><a href="TradeList.html">거래내역</a></li>
+                    <li><a href="Balance.html">입출금</a></li>
+                    <li><a href="./Board/notice.html">공지사항</a></li>
+                    <li><a href="./Board/qna.html">고객센터</a></li>
+                </ul>
+
+                <ol id="slideToggle">
+                    <li>
+                        <div>
+                            <span>Theme</span>
+                            <input type="checkbox" id="modeSwitch2" />
+                            <label for="modeSwitch2"><span></span></label>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </header>
+    </article>
+
+
+    <div class="subRouteContent">
+        <div class="wrapper">
+            <div class="sub-contents-layout">
+                <div class="frameWrapper">
+                    <div class="_layer_background"></div>
+                    <div class="invest_wrap">
+                        <!-- 메인컨텐츠 시작 -->
+
+                        <form method="post" action="" id="form1">
+                            <div class="aspNetHidden">
+                                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                                    value="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OjAwPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPuyeheq4iOyLoOyyrTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD4xNDUuNDkyNjM4MDc8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8dGQ+7LKY66as7JmE66OMPC90ZD4NCiAgICAgICAgICAgICAgICA8L3RyPiAgDQogICAgICAgICAgICAgICAgDQoNCiAgICAgICAgICAgICAgICA8dHI+DQogICAgICAgICAgICAgICAgICAgIDx0ZD4yMDIzLTA4LTE4IDAyOjUxOjAwPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPuyeheq4iOyLoOyyrTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDx0ZD43MzM3LjA4MDEzNTU5PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPHRkPuyymOumrOyZhOujjDwvdGQ+DQogICAgICAgICAgICAgICAgPC90cj4gIA0KICAgICAgICAgICAgICAgIGQCBg8WAh8ABT08bGk+PGEgaHJlZj0nL0JhbGFuY2UuYXNweD8mcGFnZT0xJyBjbGFzcz0iYWN0aXZlIj4xPC9hPjwvbGk+ZGRDq91OfqdnvrxRSA54R7oJs93RX+Q/56n2Me4gO9V2ow==">
+                            </div>
+
+                            <div class="aspNetHidden">
+
+                                <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR"
+                                    value="4A34F54E">
+                                <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                                    value="/wEdAAaax86wueGfM04lTABH0i9Zz9Qi2u9FTH4hr9qwk2HaO3tU28CZD7rz41PP+eYYOaQJ/VQ9ftj/394ehEyfRt37kljTdaIA8S7j6UGq9WYLrfAeM1Dl4sr95CelMNM4tChZmcodtCOdwM754tep7SqMka7o8W30qjbP6O7ZS06V3w==">
+                            </div>
+
+                            <section class="balanceContainer">
+                                <div>
+                                    <h3>입출금</h3>
+                                    <ul class="tabMenu">
+                                        <li data-tabnumb="balTab1" class="active">입금신청</li>
+                                        <li data-tabnumb="balTab2">출금신청</li>
+                                    </ul>
+
+                                    <div id="balTab1" class="tabPage active">
+                                        <h4>입금안내</h4>
+                                        <ol>
+                                            <li>입금 전용계좌는 수시로 변경될 수 있습니다.</li>
+                                            <li>입금 전 "전용계좌 문의"를 통해 입금 전용계좌 확인 바랍니다.</li>
+                                            <li>정상적으로 입금 후 전환 신청이 되셨다면 5분 이내 USDT 전환이 완료됩니다.</li>
+                                            <li>전환 신청 후 20분 이내에 입금이 되지 않는 경우에는 신청 내용이 자동 삭제 처리되며 선 입금 후 전환 신청을 하시면 더욱 빠른
+                                                전환이 가능합니다.</li>
+                                            <li>문제가 있을 시 고객센터 1:1문의를 통해 문의 바랍니다.</li>
+                                        </ol>
+                                        <h4>주의사항</h4>
+                                        <ol>
+                                            <li>입금 시 등록된 출금계좌와 동일한 명의의 계좌에서 입금하셔야만 USDT 전환이 가능합니다.</li>
+                                            <li>USDT 전환은 KRW 기준 1만 원단위로만 신청하실 수 있습니다.</li>
+                                            <li>수표 입금은 전환 처리되지 않습니다.</li>
+                                        </ol>
+                                        <h4><span class="date"></span>실시간 환율정보 ( 2024-05-29 )</h4>
+                                        <ol>
+                                            <li>달러 매수가 : <span class="buy">1389.09</span></li>
+                                            <li>달러 매도가 : <span class="sell">1341.31</span></li>
+                                        </ol>
+                                        <center>
+                                            <!-- <input type="submit" name="ctl00$cpContent$btnBankCheck" value="입금 전용계좌 확인"
+                                                onclick="btnBankPopUp();" id="cpContent_btnBankCheck"
+                                                class="deposit_bankcheck"> -->
+                                                <a href="./Board/qna1.html" name="ctl00$cpContent$btnBankCheck" value="입금 전용계좌 확인"
+                                                onclick="btnBankPopUp();" id="cpContent_btnBankCheck"
+                                                class="deposit_bankcheck">입금 전용계좌 확인</a>
+                                        </center>
+
+                                        <div>
+                                            <input name="ctl00$cpContent$txtDeposit" type="text" value="0"
+                                                id="txtDeposit" class="input_deposit_box"
+                                                onkeyup="javascript:this.value=Comma(this.value.replace(/[^\d]/g,''));">
+                                            <input type="button" data-d-w="d" data-money="100000" class="deposit_button"
+                                                onclick="setTextBoxValue(this)" value="100,000원">
+                                            <input type="button" data-d-w="d" data-money="1000000"
+                                                class="deposit_button" onclick="setTextBoxValue(this)"
+                                                value="1,000,000원">
+                                            <input type="button" data-d-w="d" data-money="10000000"
+                                                class="deposit_button" onclick="setTextBoxValue(this)"
+                                                value="10,000,000원">
+                                            <input type="button" data-d-w="d" data-money="0" class="deposit_button"
+                                                onclick="setTextBoxValue(this)" value="리셋">
+                                            <input type="submit" name="ctl00$cpContent$btnDeposit" value="입금신청"
+                                                onclick="return CheckPrice(1);" id="cpContent_btnDeposit"
+                                                class="deposit_buttonact">
+                                        </div>
+                                    </div>
+                                    <div id="balTab2" class="tabPage">
+                                        <h4>출금안내</h4>
+                                        <ol>
+                                            <li>24시간 자유롭게 전환 및 출금이 가능합니다.</li>
+                                            <li>은행 점검 시간 (매일 23:50 ~ 00:30)에는 전환 및 출금 서비스 이용이 원활하지 않을 수 있습니다.</li>
+                                            <li>최근 달러의 심각한 등락과 더불어 불법 환율 차익 거래를 방지하고자 1회 전환 출금 금액을 제한합니다.</li>
+                                            <li>1회 최대 전환 및 출금 금액 5,000USDT (4시간마다 전환 및 출금 신청 가능)</li>
+                                        </ol>
+                                        <h4><span class="date"></span>실시간 환율정보 ( 2024-05-29 )</h4>
+                                        <ol>
+                                            <li>달러 매수가 : <span class="buy">1389.09</span></li>
+                                            <li>달러 매도가 : <span class="sell">1341.31</span></li>
+                                        </ol>
+                                        <div>
+                                            <input name="ctl00$cpContent$txtWithdraw" type="text" value="0"
+                                                id="txtWithdraw" class="input_withdraw_box"
+                                                onkeyup="javascript:this.value=Comma(this.value.replace(/[^\d]/g,''));">
+                                            <input type="button" data-d-w="w" data-money="10" class="deposit_button"
+                                                onclick="setTextBoxValue(this)" value="10 USDT">
+                                            <input type="button" data-d-w="w" data-money="100" class="deposit_button"
+                                                onclick="setTextBoxValue(this)" value="100 USDT">
+                                            <input type="button" data-d-w="w" data-money="1000" class="deposit_button"
+                                                onclick="setTextBoxValue(this)" value="1,000 USDT">
+                                            <input type="button" data-d-w="w" data-money="0" class="deposit_button"
+                                                onclick="setTextBoxValue(this)" value="리셋">
+                                            <input type="submit" name="ctl00$cpContent$btnWithdraw" value="출금신청"
+                                                onclick="return CheckPrice(2);" id="cpContent_btnWithdraw"
+                                                class="deposit_buttonact">
+                                        </div>
+                                    </div>
+
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>일자</th>
+                                                <th>내용</th>
+                                                <th>금액</th>
+                                                <th>상태</th>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td>2023-10-13 22:31:00</td>
+                                                <td>입금신청</td>
+                                                <td>145.49263807</td>
+                                                <td>처리완료</td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td>2023-08-18 02:51:00</td>
+                                                <td>입금신청</td>
+                                                <td>7337.08013559</td>
+                                                <td>처리완료</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                    <div class="pagenation">
+                                        <ol>
+                                            <li><a href="/Balance.aspx?&amp;page=1" class="active">1</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </form>
+
+                        <!-- 메인컨텐츠 끝 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="positionCheck"></div>
+
+    <footer>
+        <div>
+            <div>
+                <h4></h4>
+                <ul>
+                    <li>모든 컨텐츠 저작권은 비트프로에 있으며, 무단도용시 법적 불이익을 받습니다.</li>
+                    <li>Copyright © 비트프로. All rights reserved</li>
+                    <li>
+                        <ol>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+
+            <ul>
+                <li>
+                    <b>파트너</b>
+                    <ol>
+                        <li><a href="https://www.binance.com">바이낸스</a></li>
+                        <li><a href="https://www.upbit.com">업비트</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <b>회사 소개</b>
+                    <ol>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="/Board/List.aspx?id=notice">공지사항</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">Open API 이용약관</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+
+        var rCnt = 0;
+        if (rCnt > 0 && window.location.href.indexOf("qna") < 0) {
+            Swal.fire('확인하지 않은 관리자 댓글이 있습니다.').then(function () {
+                window.location = './Board/qna.html';
+            })
+        }
+        var rCnt2 = 0;
+        if (rCnt2 > 0 && window.location.href.indexOf("message") < 0) {
+            Swal.fire('확인하지 않은 알림이 있습니다.').then(function () {
+                window.location = './Board/message.html';
+            })
+        }
+    </script>
+
+</body>
+
+</html>

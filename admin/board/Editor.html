@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <title>Summernote Integration</title>
+    <style>
+        .note-editor.note-frame .note-editing-area .note-editable {
+            background-color: #f8f9fa; /* Light grey background */
+            color: #212529; /* Dark text color */
+        }
+    </style>
+</head>
+<body>
+
+    <textarea name="memo" class="form-control text-primary" id="summernote"></textarea>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#summernote').summernote({
+          placeholder: 'Write your memo here...',
+          fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New'],
+          fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '24', '36', '48', '64', '82', '150'],
+          toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'clear']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['height', ['height']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+          ],
+          height: 450 // Adjust the height here as needed
+        });
+      });
+    </script>
+</body>
+</html>

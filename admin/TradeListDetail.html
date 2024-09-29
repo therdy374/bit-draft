@@ -1,0 +1,251 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta lang="en" translate="no">
+    <title>
+        거래내역 상세
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        body {
+            background: #fff !important;
+            font-family: 'Malgun Gothic', Gulim, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #333;
+        }
+
+        footer {
+            display: none !important;
+        }
+
+        .nav_menu {
+            display: none !important;
+        }
+
+        caption {
+            display: none !important;
+        }
+
+        .price {
+            font-family: 'Malgun Gothic', Gulim, Helvetica, sans-serif;
+            font-size: 12px !important;
+            color: #333 !important;
+        }
+
+        .sub-contents-layout {
+            position: relative;
+            display: inline-block;
+            width: 900px;
+        }
+
+        .frameWrapper {
+            position: relative;
+            display: block;
+            width: 900px;
+            overflow: hidden;
+        }
+
+        .invest_wrap {
+            position: relative;
+            width: 898px;
+            min-height: 1100px;
+            border: 1px solid #dee3eb;
+            background-color: #fff;
+        }
+
+
+        td span {
+            line-height: 15px !important;
+        }
+
+        .history_area .list_area {
+            padding: 10px 30px 30px;
+        }
+
+        .history_area .list {
+            width: 100%;
+            border: none;
+            min-height: 320px;
+        }
+
+        .history_area .list .cell_price span {
+            display: block;
+        }
+
+        .history_area .list tr:first-child {
+            border-top: none;
+        }
+
+        .history_area .list tr {
+            border-top: 1px solid #f2f2f2;
+        }
+
+        .history_area .list .cell_price {
+            text-align: center;
+            line-height: 150%;
+        }
+
+        .history_area .list th {
+            height: 51px;
+            line-height: 170%;
+            border: none;
+            border-bottom: 1px solid #dee3eb;
+        }
+
+        .history_area .list .cell_btn {
+            position: relative;
+        }
+
+        .history_area .list .cell_btn .btn_tip {
+            top: 7px;
+        }
+
+        .history_area .list .cell_btn .btn_tip .detail {
+            text-align: left;
+            margin-left: -190px;
+        }
+
+        .history_area .list td {
+            height: 51px;
+            border: none;
+            border-bottom: 1px solid #ebeef3;
+            text-align: center;
+        }
+
+        .invest_area .leverage .input_area .input {
+            padding: 0 20px;
+            width: 100%;
+            height: 43px;
+            line-height: 43px;
+            text-align: center;
+            border: none;
+            background-color: #f2f2f7;
+            font-size: 14px;
+            font-weight: 700;
+            box-sizing: border-box;
+        }
+
+        .invest_area .leverage .input_area .btn_cancel {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 43px;
+            height: 43px;
+            line-height: 43px;
+            text-align: center;
+            background-color: #6c6c6c;
+            color: #fff;
+        }
+
+        .invest_area .leverage .btn_detail.selected {
+            color: #e14549;
+        }
+
+        .history_area .plus,
+        .history_area .long {
+            color: #e14549 !important;
+        }
+
+        .history_area .minus,
+        .history_area .short {
+            color: #3498db !important;
+        }
+
+        .history_area .list .cell_price .date {
+            color: #999;
+            font-size: 11px;
+        }
+
+        .paging strong {
+            color: #fff;
+            border: 1px solid #5e5e5e;
+            background: #5e5e5e;
+        }
+
+        .paging a,
+        .paging strong {
+            display: inline-block;
+            margin-right: 1px;
+            padding: 7px 7px 7px 7px;
+            font-size: 14px;
+            border: 1px solid #d4d4d4;
+            min-width: 40px;
+        }
+
+        .paging {
+            padding-top: 10px;
+            margin-top: 100px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="subRouteContent">
+        <div class="wrapper">
+            <div class="sub-contents-layout">
+                <div class="frameWrapper">
+                    <div class="invest_wrap">
+                        <!-- 메인컨텐츠 시작 -->
+
+                        <div id="history-div" class="history_area">
+
+                            <div class="liq_list" style="">
+                                <div class="list_area">
+                                    <table class="list" border="1">
+                                        <caption>결과리스트</caption>
+                                        <colgroup>
+                                            <col width="140px">
+                                            <col width="50px">
+                                            <col width="50px">
+                                            <col width="50px">
+                                            <col width="50px">
+                                            <col width="50px">
+                                            <col width="50px">
+
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="cell_price">내용</th>
+                                                <th class="cell_price">투자금</th>
+                                                <th class="cell_price">진입가</th>
+                                                <th class="cell_price">예상청산가</th>
+                                                <th class="cell_price">손실</th>
+                                                <th class="cell_price">손익</th>
+                                                <th class="cell_price">수수료</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="complete-list">
+
+                                            <tr>
+                                                <td class="cell_price">진입<br>2024-05-30 오후 3:27:38</td>
+                                                <td class="cell_price"> 29.226 </td>
+                                                <td class="cell_price"> 67908.62 </td>
+                                                <td class="cell_price"> 61299.1121394422 </td>
+                                                <td class="cell_price"><br></td>
+                                                <td class="cell_price"><br></td>
+                                                <td class="cell_price"> 0.1052136 <br></td>
+                                            </tr>
+
+                                            <tr></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
